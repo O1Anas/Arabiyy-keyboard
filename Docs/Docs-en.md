@@ -1,6 +1,6 @@
 # Foundational Principle
 > [!NOTE]
-> Make sure you have followed [the Download/installation Guide here](https://github.com/O1Anas/Arabiyy-keyboard/blob/main/Docs/README-en.md#download-install).
+> Make sure you have followed [the Download/installation Guide here](README-en.md#download-install).
 
 This keyboard is designed to facilitate Arabic text input (Digitally ofc), with special attention to terminology our muslim brothers & sisters will need.
 
