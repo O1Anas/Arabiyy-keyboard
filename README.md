@@ -11,12 +11,23 @@
   <h4><a href="https://github.com/AnasImr/Arabiyy-keyboard/blob/main/README-en.md">Continue reading in English</a> - <a href="https://github.com/AnasImr/Arabiyy-keyboard/blob/main/README-ar.md">أكمِل القِراءَةَ بِاللُّغَةِ العَرَبِيَّةِ الفُصحَى</a><h4>
 </div>
 
+---
 <div align="center">
-  <h3>Arabiyy in action - عَرَبِيّ قَيدَ الإستِخدام</h3>
+  <h2>Arabiyy in action - عَرَبِيّ قَيدَ الإستِخدام</h2>
 </div>
 
-![Preview-1](Visuals/preview-diino-3izz.gif)
-![Preview-2](Visuals/preview-maa-wahannaa.gif)
-![Preview-3](Visuals/preview-9om.gif)
+![Preview](Visuals/preview-maa-wahannaa.gif)
+<details align="center"><summary>
 
----
+#### ‎"‎قُم" Preview
+
+</summary>
+  <img src="https://raw.githubusercontent.com/O1Anas/Arabiyy-keyboard/refs/heads/main/Visuals/preview-9om.gif">
+</details>
+<details align="center"><summary>
+
+#### ‎"‎وَديني دينُ عِزٍّ" Preview
+
+</summary>
+  <img src="https://raw.githubusercontent.com/O1Anas/Arabiyy-keyboard/refs/heads/main/Visuals/preview-diino-3izz.gif">
+</details>
