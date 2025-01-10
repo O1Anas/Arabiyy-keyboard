@@ -8,7 +8,7 @@
 | <h4>This tool is a virtual keyboard that allows our Muslim brothers and sisters to type any Arabic word with dynamic tashkeel, all of that from the comfort of the Latin keyboard already built into their devices and most of the world's devices.</h4>  | <h3>هَذِهِ الأداة هِيَ لَوحَة مَفاتيحٍ إفتِراضِيَّةٍ تُتيحُ لِإخوانِنا مِنَ المُسلِمينَ والمُسلِماتِ كِتابَةَ أيِّ كَلِمَةٍ عَرَبِيَّةٍ مَعَ تَشكيلِها ديناميكِيًّا، وَهَذا مِن راحَةِ لَوحَةِ المَفاتيحِ اللاتينِيَّةِ المُدمَجَةِ أصلًا في حَواسيبِهِم وَمُعظَمِ حَواسيبِ العالَم‏.‏</h3> |
 
 <div align="center">
-  <h2><a href="https://github.com/AnasImr/Arabiyy-keyboard/blob/main/README-en.md">Continue reading in English</a> - <a href="https://github.com/AnasImr/Arabiyy-keyboard/blob/main/README-ar.md">أكمِل القِراءَةَ بِالعَرَبِيَّةِ الفُصحَى</a><h2>
+  <h2><a href="Docs/README-en.md">Continue reading in English</a> - <a href="Docs/README-ar.md">أكمِل القِراءَةَ بِالعَرَبِيَّةِ الفُصحَى</a><h2>
 </div>
 
 <div align="center">

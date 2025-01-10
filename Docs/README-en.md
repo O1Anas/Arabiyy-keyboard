@@ -49,10 +49,10 @@ To get the `Arabiyy` keyboard on your device, follow these steps:
 - If not, then download the normal variation (writes numbers without needing `shift`).
 
 # <a id="usage"></a>Usage
-A detailed guide on how to use this tool is already written [here, in the docs file.](Docs/docs-en.md)
-![Preview](Visuals/preview-9om.gif)
+A detailed guide on how to use this tool is already written [here, in the docs file.](Docs-en.md)
+![Preview](../Visuals/preview-9om.gif)
 
-<div align="center"><h2><a href="https://github.com/O1Anas/Arabiyy-keyboard/blob/main/Docs/docs-en.md">------- Usage guide -------</a></h2></div>
+<div align="center"><h2><a href="Docs-en.md">------- Usage guide -------</a></h2></div>
 
 # <a id="development"></a>Development
 To continue the development of this tool:
