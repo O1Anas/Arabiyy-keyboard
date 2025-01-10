@@ -5,13 +5,12 @@
 
 | **English**  | **العَرَبِيَّة** |
 |  :--- |  ---: |
-| This tool is a virtual keyboard that allows our Muslim brothers and sisters to type any Arabic word with dynamic tashkeel, all of that from the comfort of the Latin keyboard already built into their devices and most of the world's devices.  | ‏هَذِهِ الأداةُ هِيَ لَوحَةُ مَفاتيحٍ إفتِراضِيَّةٍ تُتيحُ لِإخوانِنا مِنَ المُسلِمينَ والمُسلِماتِ كِتابَةَ أيِّ كَلِمَةٍ عَرَبِيَّةٍ مَعَ تَشكيلِها ديناميكِيًّا، وَهَذا مِن راحَةِ لَوحَةِ المَفاتيحِ اللاتينِيَّةِ المُدمَجَةِ أصلًا في حَواسيبِهِم وَمُعظَمِ حَواسيبِ العالَم‏.‏  |
+| <h4>This tool is a virtual keyboard that allows our Muslim brothers and sisters to type any Arabic word with dynamic tashkeel, all of that from the comfort of the Latin keyboard already built into their devices and most of the world's devices.</h4>  | <h3>هَذِهِ الأداة هِيَ لَوحَة مَفاتيحٍ إفتِراضِيَّةٍ تُتيحُ لِإخوانِنا مِنَ المُسلِمينَ والمُسلِماتِ كِتابَةَ أيِّ كَلِمَةٍ عَرَبِيَّةٍ مَعَ تَشكيلِها ديناميكِيًّا، وَهَذا مِن راحَةِ لَوحَةِ المَفاتيحِ اللاتينِيَّةِ المُدمَجَةِ أصلًا في حَواسيبِهِم وَمُعظَمِ حَواسيبِ العالَم‏.‏</h3> |
 
 <div align="center">
-  <h4><a href="https://github.com/AnasImr/Arabiyy-keyboard/blob/main/README-en.md">Continue reading in English</a> - <a href="https://github.com/AnasImr/Arabiyy-keyboard/blob/main/README-ar.md">أكمِل القِراءَةَ بِاللُّغَةِ العَرَبِيَّةِ الفُصحَى</a><h4>
+  <h2><a href="https://github.com/AnasImr/Arabiyy-keyboard/blob/main/README-en.md">Continue reading in English</a> - <a href="https://github.com/AnasImr/Arabiyy-keyboard/blob/main/README-ar.md">أكمِل القِراءَةَ بِالعَرَبِيَّةِ الفُصحَى</a><h2>
 </div>
 
----
 <div align="center">
   <h2>Arabiyy in action - عَرَبِيّ قَيدَ الإستِخدام</h2>
 </div>
@@ -22,12 +21,12 @@
 #### ‎"‎قُم" Preview
 
 </summary>
-  <img src="https://raw.githubusercontent.com/O1Anas/Arabiyy-keyboard/refs/heads/main/Visuals/preview-9om.gif">
+  <img src="Visuals/preview-9om.gif">
 </details>
 <details align="center"><summary>
 
 #### ‎"‎وَديني دينُ عِزٍّ" Preview
 
 </summary>
-  <img src="https://raw.githubusercontent.com/O1Anas/Arabiyy-keyboard/refs/heads/main/Visuals/preview-diino-3izz.gif">
+  <img src="Visuals/preview-diino-3izz.gif">
 </details>
