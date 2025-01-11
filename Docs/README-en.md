@@ -1,5 +1,5 @@
 # <a id="introduction"></a>Arabiyy Keyboard
-![Banner](Visuals/Banner.png)
+![Banner](../Visuals/Banner.png)
 This tool allows our Muslim brothers and sisters to type any Arabic word with dynamic tashkeel, all of that from the comfort of the Latin keyboard already built into their device and most of the world's devices.
 
 ## Table of Contents
