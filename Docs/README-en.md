@@ -67,7 +67,7 @@ To continue the development of this tool:
 - [ ] Make a table with all Arabic characters & every way to type them ?
 
 ## <a id="copyright"></a>Copyright
-See [LICENSE-en.md](LICENSE-en.md)
+See [LICENSE-en.md](LICENSE-en.md).
 
 ## <a id="this-tool-will-help"></a>This Tool Will Help  
 - Seekers of useful knowledge
