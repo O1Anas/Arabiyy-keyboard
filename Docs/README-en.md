@@ -36,7 +36,7 @@ To get the `Arabiyy` keyboard on your device, follow these steps:
    - Download and install the Keyman app for your device/platform from [here](https://keyman.com/downloads/)<br>(https://keyman.com/downloads/).
 
 > [!IMPORTANT]
-> On PC, Make sure you go to `Keyman Configuration > Options` & scroll down & choose the correct Base keyboard that corresponds to your hardware.
+> On PC, Make sure you go to `Keyman Configuration > Options` & scroll down & choose the correct `Base keyboard` that corresponds to your hardware.
 
 2. **Download the Keyboard**:
    - Go to [Releases](https://github.com/O1Anas/Arabiyy-keyboard/releases) and download the latest version.
