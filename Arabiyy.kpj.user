@@ -23,14 +23,6 @@
       <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\LICENSE-en.md</FullPath>
     </FileState>
     <FileState>
-      <ID>id_06866c270ec1909a6b92c8686a469c00</ID>
-      <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\README-ar.md</FullPath>
-    </FileState>
-    <FileState>
-      <ID>id_afb7dabc8555b7d9104f26b86d31b8c4</ID>
-      <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\README-en.md</FullPath>
-    </FileState>
-    <FileState>
       <ID>id_0730bb7c2e8f9ea2438b52e419dd86c9</ID>
       <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\README.md</FullPath>
     </FileState>
@@ -63,6 +55,11 @@
       <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\source\Arabiyy.kvks</FullPath>
     </FileState>
     <FileState>
+      <ID>id_b60f9d9797f2468be4fbf5fafff95481</ID>
+      <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\source\ArabiyyNumOnShift.kmn</FullPath>
+      <Debug>False</Debug>
+    </FileState>
+    <FileState>
       <ID>id_dda80b6081e70df3fecdbe043144a6d9</ID>
       <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\source\..\build\Arabiyy.kmx</FullPath>
     </FileState>
@@ -90,6 +87,12 @@
   <MRU>
     <File>
       <ID>id_MRU0</ID>
+      <Filename>ArabiyyNumOnShift.kmn</Filename>
+      <FileType>.kmn</FileType>
+      <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\source\ArabiyyNumOnShift.kmn</FullPath>
+    </File>
+    <File>
+      <ID>id_MRU1</ID>
       <Filename>Arabiyy.kmn</Filename>
       <FileType>.kmn</FileType>
       <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\source\Arabiyy.kmn</FullPath>

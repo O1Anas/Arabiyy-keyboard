@@ -62,20 +62,37 @@ function Keyboard_arabiyy()
     }
     else if(k.KKM(e, modCodes.SHIFT | modCodes.VIRTUAL_KEY /* 0x4010 */, keyCodes.K_PGUP /* 0x21 */)) {
       if(1){
+        r=m=1;   // Line 39
+        k.KDC(0,t);
+        k.KO(-1,t,"1");
+      }
+      else if(1){
         r=m=1;   // Line 172
         k.KDC(0,t);
         k.KO(-1,t,"!");
       }
     }
-    else if(k.KKM(e, modCodes.SHIFT | modCodes.VIRTUAL_KEY /* 0x4010 */, keyCodes.K_PGDN /* 0x22 */)) {
+    else if(k.KKM(e, modCodes.SHIFT | modCodes.VIRTUAL_KEY /* 0x4010 */, keyCodes.K_END /* 0x23 */)) {
       if(1){
         r=m=1;   // Line 45
         k.KDC(0,t);
-        k.KO(-1,t,"ع");
+        k.KO(-1,t,"3");
+      }
+    }
+    else if(k.KKM(e, modCodes.SHIFT | modCodes.VIRTUAL_KEY /* 0x4010 */, keyCodes.K_HOME /* 0x24 */)) {
+      if(1){
+        r=m=1;   // Line 48
+        k.KDC(0,t);
+        k.KO(-1,t,"4");
       }
     }
     else if(k.KKM(e, modCodes.SHIFT | modCodes.VIRTUAL_KEY /* 0x4010 */, keyCodes.K_LEFT /* 0x25 */)) {
       if(1){
+        r=m=1;   // Line 51
+        k.KDC(0,t);
+        k.KO(-1,t,"5");
+      }
+      else if(1){
         r=m=1;   // Line 157
         k.KDC(0,t);
         k.KO(-1,t,"%");
@@ -83,27 +100,25 @@ function Keyboard_arabiyy()
     }
     else if(k.KKM(e, modCodes.SHIFT | modCodes.VIRTUAL_KEY /* 0x4010 */, keyCodes.K_UP /* 0x26 */)) {
       if(1){
-        r=m=1;   // Line 39
+        r=m=1;   // Line 57
         k.KDC(0,t);
-        k.KDO(-1,t,0);
-      }
-    }
-    else if(k.KKM(e, modCodes.VIRTUAL_KEY /* 0x4000 */, keyCodes.K_RIGHT /* 0x27 */)) {
-      if(1){
-        r=m=1;   // Line 48
-        k.KDC(0,t);
-        k.KO(-1,t,"'");
+        k.KO(-1,t,"7");
       }
     }
     else if(k.KKM(e, modCodes.SHIFT | modCodes.VIRTUAL_KEY /* 0x4010 */, keyCodes.K_DOWN /* 0x28 */)) {
       if(1){
-        r=m=1;   // Line 51
+        r=m=1;   // Line 63
         k.KDC(0,t);
-        k.KO(-1,t,"خ");
+        k.KO(-1,t,"9");
       }
     }
     else if(k.KKM(e, modCodes.SHIFT | modCodes.VIRTUAL_KEY /* 0x4010 */, keyCodes.K_SEL /* 0x29 */)) {
       if(1){
+        r=m=1;   // Line 36
+        k.KDC(0,t);
+        k.KO(-1,t,"0");
+      }
+      else if(1){
         r=m=1;   // Line 149
         k.KDC(0,t);
         k.KO(-1,t,")");
@@ -111,6 +126,11 @@ function Keyboard_arabiyy()
     }
     else if(k.KKM(e, modCodes.SHIFT | modCodes.VIRTUAL_KEY /* 0x4010 */, keyCodes.K_PRINT /* 0x2A */)) {
       if(1){
+        r=m=1;   // Line 60
+        k.KDC(0,t);
+        k.KO(-1,t,"8");
+      }
+      else if(1){
         r=m=1;   // Line 159
         k.KDC(0,t);
         k.KO(-1,t,"ۚ");
@@ -128,13 +148,6 @@ function Keyboard_arabiyy()
         r=m=1;   // Line 163
         k.KDC(0,t);
         k.KO(-1,t,"،");
-      }
-    }
-    else if(k.KKM(e, modCodes.VIRTUAL_KEY /* 0x4000 */, keyCodes.K_INS /* 0x2D */)) {
-      if(1){
-        r=m=1;   // Line 54
-        k.KDC(0,t);
-        k.KO(-1,t,"ط");
       }
     }
     else if(k.KKM(e, modCodes.VIRTUAL_KEY /* 0x4000 */, keyCodes.K_DEL /* 0x2E */)) {
@@ -155,70 +168,70 @@ function Keyboard_arabiyy()
       if(1){
         r=m=1;   // Line 37
         k.KDC(0,t);
-        k.KO(-1,t,"0");
+        k.KDO(-1,t,0);
       }
     }
     else if(k.KKM(e, modCodes.VIRTUAL_KEY /* 0x4000 */, keyCodes.K_1 /* 0x31 */)) {
       if(1){
         r=m=1;   // Line 40
         k.KDC(0,t);
-        k.KO(-1,t,"1");
+        k.KDO(-1,t,0);
       }
     }
     else if(k.KKM(e, modCodes.VIRTUAL_KEY /* 0x4000 */, keyCodes.K_2 /* 0x32 */)) {
       if(1){
         r=m=1;   // Line 43
         k.KDC(0,t);
-        k.KO(-1,t,"2");
+        k.KO(-1,t,"ء");
       }
     }
     else if(k.KKM(e, modCodes.VIRTUAL_KEY /* 0x4000 */, keyCodes.K_3 /* 0x33 */)) {
       if(1){
         r=m=1;   // Line 46
         k.KDC(0,t);
-        k.KO(-1,t,"3");
+        k.KO(-1,t,"ع");
       }
     }
     else if(k.KKM(e, modCodes.VIRTUAL_KEY /* 0x4000 */, keyCodes.K_4 /* 0x34 */)) {
       if(1){
         r=m=1;   // Line 49
         k.KDC(0,t);
-        k.KO(-1,t,"4");
+        k.KO(-1,t,"'");
       }
     }
     else if(k.KKM(e, modCodes.VIRTUAL_KEY /* 0x4000 */, keyCodes.K_5 /* 0x35 */)) {
       if(1){
         r=m=1;   // Line 52
         k.KDC(0,t);
-        k.KO(-1,t,"5");
+        k.KO(-1,t,"خ");
       }
     }
     else if(k.KKM(e, modCodes.VIRTUAL_KEY /* 0x4000 */, keyCodes.K_6 /* 0x36 */)) {
       if(1){
         r=m=1;   // Line 55
         k.KDC(0,t);
-        k.KO(-1,t,"6");
+        k.KO(-1,t,"ط");
       }
     }
     else if(k.KKM(e, modCodes.VIRTUAL_KEY /* 0x4000 */, keyCodes.K_7 /* 0x37 */)) {
       if(1){
         r=m=1;   // Line 58
         k.KDC(0,t);
-        k.KO(-1,t,"7");
+        k.KO(-1,t,"ح");
       }
     }
     else if(k.KKM(e, modCodes.VIRTUAL_KEY /* 0x4000 */, keyCodes.K_8 /* 0x38 */)) {
       if(1){
         r=m=1;   // Line 61
         k.KDC(0,t);
-        k.KO(-1,t,"8");
+        k.KDO(-1,t,0);
       }
     }
     else if(k.KKM(e, modCodes.VIRTUAL_KEY /* 0x4000 */, keyCodes.K_9 /* 0x39 */)) {
       if(1){
         r=m=1;   // Line 64
         k.KDC(0,t);
-        k.KO(-1,t,"9");
+        k.KO(-1,t,"ق");
       }
     }
     else if(k.KKM(e, modCodes.SHIFT | modCodes.VIRTUAL_KEY /* 0x4010 */, 0x3A)) {
@@ -247,6 +260,13 @@ function Keyboard_arabiyy()
         r=m=1;   // Line 164
         k.KDC(0,t);
         k.KO(-1,t,"؟");
+      }
+    }
+    else if(k.KKM(e, modCodes.SHIFT | modCodes.VIRTUAL_KEY /* 0x4010 */, 0x40)) {
+      if(1){
+        r=m=1;   // Line 42
+        k.KDC(0,t);
+        k.KO(-1,t,"2");
       }
     }
     else if(k.KKM(e, modCodes.SHIFT | modCodes.VIRTUAL_KEY /* 0x4010 */, keyCodes.K_A /* 0x41 */)) {
@@ -431,11 +451,11 @@ function Keyboard_arabiyy()
         k.KDO(-1,t,0);
       }
     }
-    else if(k.KKM(e, modCodes.SHIFT | modCodes.VIRTUAL_KEY /* 0x4010 */, 0x5F)) {
+    else if(k.KKM(e, modCodes.SHIFT | modCodes.VIRTUAL_KEY /* 0x4010 */, 0x5E)) {
       if(1){
-        r=m=1;   // Line 60
+        r=m=1;   // Line 54
         k.KDC(0,t);
-        k.KDO(-1,t,0);
+        k.KO(-1,t,"6");
       }
     }
     else if(k.KKM(e, modCodes.VIRTUAL_KEY /* 0x4000 */, keyCodes.K_NP1 /* 0x61 */)) {
@@ -640,26 +660,6 @@ function Keyboard_arabiyy()
         r=m=1;   // Line 160
         k.KDC(0,t);
         k.KO(-1,t,"µ");
-      }
-      else if(1){
-        r=m=1;   // Line 36
-        k.KDC(0,t);
-        k.KDO(-1,t,0);
-      }
-      else if(1){
-        r=m=1;   // Line 63
-        k.KDC(0,t);
-        k.KO(-1,t,"ق");
-      }
-      else if(1){
-        r=m=1;   // Line 57
-        k.KDC(0,t);
-        k.KO(-1,t,"ح");
-      }
-      else if(1){
-        r=m=1;   // Line 42
-        k.KDC(0,t);
-        k.KO(-1,t,"ء");
       }
       else if(1){
         r=m=1;   // Line 156

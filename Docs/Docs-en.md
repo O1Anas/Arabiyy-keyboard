@@ -53,12 +53,12 @@ Furthermore, some arabic letters that aren't accessible through the latin keyboa
 - `T` is set to `ط`
 
 The numbers row is also used in this keyboard to output these characters:
-- `é` (2) is set to `ء` (hamza)
-- `"` (3) is set to `ع` ('ayn)
-- `(` (5) is set to `خ` (khaa)
-- `-` (6) is set to `ط` (taa)
-- `è` (7) is set to `ح` (haa)
-- `ç` (9) is set to `ق` (qaaf)
+- `2` (`é`/`@`) is set to `ء` (hamza)
+- `3` (`"`/`#`) is set to `ع` ('ayn)
+- `5` (`(`/`%`) is set to `خ` (khaa)
+- `6` (`-`/`^`) is set to `ط` (taa)
+- `7` (`è`/`&`) is set to `ح` (haa)
+- `9` (`ç`/`(`) is set to `ق` (qaaf)
 
 ## 1. Shadda (Emphasis) Handling
 Repeated consonants (`‎و` & `‎ي` as well) automatically receive a shadda (`‎ ّ`), for example:
