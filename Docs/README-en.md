@@ -44,8 +44,8 @@ To get the `Arabiyy` keyboard on your device, follow these steps:
 
 | Keyboard variation | Description |
 |---|---|
-| `Arabiyy.kmx` | Default variation with numbers on the 1st level (without needing `shift`)<li>It should work well with `US/UK QWERTY`, `QWERTZ`, `DVORAK`, `COLEMAK` & `French-Belgian (exceptional AZERTY)`</li> |
-| `ArabiyyNumOnShift.kmx` | This variation has numbers on the 2nd level (needs `shift`)<li>It should work well with `AZERTY (French-Standard)`, `French DVORAK (BÉPO)` & `Arabic, Persian, Japanese & Canadian Keyboard Layouts`</li> |
+| `Arabiyy.kmx` | Default variation for keyboards with numbers on the 1st level (without needing `shift`)<li>It should work well with `US/UK QWERTY`, `QWERTZ`, `DVORAK`, `COLEMAK` & `French-Belgian (exceptional AZERTY)`</li> |
+| `ArabiyyNumOnShift.kmx` | Variation for keyboards with numbers on the 2nd level (needs `shift`)<li>It should work well with `AZERTY (French-Standard)`, `French DVORAK (BÉPO)` & `Arabic, Persian, Japanese & Canadian Keyboard Layouts`</li> |
 | `Arabiyy`**`.kmp`** | This Android variation of the keyboard (COMING SOON) |
 - i.e., If your computer's keyboard writes numbers with `shift`, then download the `NumOnShift` variation.
 - If not, then download the normal variation (writes numbers without needing `shift`).
