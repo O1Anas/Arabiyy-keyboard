@@ -57,6 +57,13 @@
     <FileState>
       <ID>id_b60f9d9797f2468be4fbf5fafff95481</ID>
       <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\source\ArabiyyNumOnShift.kmn</FullPath>
+      <IDEState>
+        <LayoutDisplay102Key>0</LayoutDisplay102Key>
+        <DebugDefaultFont>1</DebugDefaultFont>
+        <DebugFont>Consolas|14|   |0</DebugFont>
+        <CodeFont>Consolas|14|   |0</CodeFont>
+        <CharFont>Consolas|14|   |0</CharFont>
+      </IDEState>
       <Debug>False</Debug>
     </FileState>
     <FileState>
@@ -87,15 +94,15 @@
   <MRU>
     <File>
       <ID>id_MRU0</ID>
-      <Filename>ArabiyyNumOnShift.kmn</Filename>
-      <FileType>.kmn</FileType>
-      <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\source\ArabiyyNumOnShift.kmn</FullPath>
-    </File>
-    <File>
-      <ID>id_MRU1</ID>
       <Filename>Arabiyy.kmn</Filename>
       <FileType>.kmn</FileType>
       <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\source\Arabiyy.kmn</FullPath>
+    </File>
+    <File>
+      <ID>id_MRU1</ID>
+      <Filename>ArabiyyNumOnShift.kmn</Filename>
+      <FileType>.kmn</FileType>
+      <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\source\ArabiyyNumOnShift.kmn</FullPath>
     </File>
   </MRU>
 </KeymanDeveloperProjectUser>

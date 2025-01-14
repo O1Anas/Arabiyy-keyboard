@@ -34,10 +34,10 @@ group(main) using keys
 + ' ' > ' '
 
 + ')' > '0'
-+ '0' > dk(none)
++ '0' > ')'
 
 + '!' > '1'
-+ '1' > dk(none)
++ '1' > '!'
 
 + '@' > '2'
 + '2' > 'ء'
@@ -58,7 +58,7 @@ group(main) using keys
 + '7' > 'ح'
 
 + '*' > '8'
-+ '8' > dk(none)
++ '8' > '*'
 
 + '(' > '9'
 + '9' > 'ق'
@@ -144,7 +144,7 @@ group(main) using keys
 c non-phonetic bindings
 
 c cc bindings of the numbers row
-+ '²' > '/'
++ '`' > '/'
 
 + ')' > ')'
 + '°' > '°'
@@ -153,24 +153,24 @@ c cc bindings of the numbers row
 + '+' > '+'
 
 c cc 2nd line's remaining bindings
-+ 'ù' > '/'
-+ '%' > '%'
++ ';' > '؛'
++ ':' > ':'
 
-+ '*' >  'ۚ'
-+ 'µ' > 'µ'
++ "'" > '/'
++ '"' > '"'
+
++ '\' >  'ۚ'
++ '|' > '|'
 
 c cc 3rd line's remaining bindings
 + ',' > '،'
-+ '?' > '؟'
++ '<' > '<'
 
-+ ';' > '؛'
 + '.' > '.'
++ '>' > '>'
 
-+ ':' > ':'
 + '/' > '/'
-
-+ '!' > '!'
-+ '§' > dk(none)
++ '?' > '?'
 
 match > use(post)
 group(post)
