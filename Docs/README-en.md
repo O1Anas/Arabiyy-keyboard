@@ -91,6 +91,6 @@ See [LICENSE-en.md](LICENSE-en.md).
 - [Qutrub](https://github.com/linuxscout/qutrub), available for Android, Linux & Windows [here](https://qutrub.arabeyes.org/download/).
 
 # <a id="like-the-project"></a>Like the Project?
-If you liked this project, and would love to financially support its creator, then
+If you liked this project, and would love to financially support its creator, then:
 
-Your support is greatly appreciated!
+<div align="center"><a href="https://ko-fi.com/T6T719GT13"><img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Support me" style="width: 100%;"></a></div>

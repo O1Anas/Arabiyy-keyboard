@@ -91,4 +91,6 @@
 - [قُطرُب](https://github.com/linuxscout/qutrub)، مُتاحٌ لِأندرويد، لِينُكسَ وَوِندُوز [مِن هُنا](https://qutrub.arabeyes.org/download/).
 
 # <a id="like-the-project"></a>أعجَبَكَ المَشروع؟
-إِذا أعجَبَكَ هَذا المَشروعُ وَتَرغَبُ في دَعمِهِ مادِّيًّا، فَإِنَّ دَعمَكَ مَحَلُّ تَقدِيرٍ كَبِير!
+إِذا أعجَبَكَ هَذا المَشروعُ وَتَرغَبُ في دَعمِهِ وَمُنشِئَهُ مادِّيًّا:
+
+<div align="center"><a href="https://ko-fi.com/T6T719GT13"><img src="../Visuals/wide-kofi-ar.svg" alt="Support me" style="width: 100%;"></a></div>
