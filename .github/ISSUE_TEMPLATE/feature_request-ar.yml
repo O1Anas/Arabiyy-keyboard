@@ -1,0 +1,47 @@
+name: "‏✨ طَلَبُ ميزةٍ جَديدة"
+description: "‏اقتَرِح ميزةً أَو تَحسينًا جَديدًا لِلَوحةِ مَفاتيحِ عَرَبِيٍّ"
+title: "‏ميزة: "
+labels: ["enhancement"]
+assignees: []
+
+body:
+  - type: textarea
+    id: feature-problem
+    attributes:
+      label: "‏هَل يَرتَبِطُ طَلَبُكَ لِميزةٍ بِمُشكِلةٍ ما؟ يُرجى الوَصف."
+      description: "‏اشرَح بِوُضوحٍ المُشكِلةَ الَّتي تُواجِهُها أَوِ الدَّافِعَ وَراءَ هَٰذا الطَّلَب. ‏مِثال: أَشعُرُ بِالإحباطِ عِندَما ..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: feature-solution
+    attributes:
+      label: "‏صِف الحَلَّ الَّذي تَرغَبُ بِه"
+      description: "‏إشرَح بِوُضوحٍ ما الَّذي تُريدُ حُدوثَهُ أَو كَيفَ تَتَصَوَّرُ الحَلَّ."
+    validations:
+      required: true
+
+  - type: textarea
+    id: feature-alternatives
+    attributes:
+      label: "‏صِفِ البَدائِلَ الَّتي فَكَّرتَ بِها"
+      description: "‏اشرَح أَيَّ حُلولٍ أَو مَزايا بَديلةٍ فَكَّرتَ بِها."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: layout-impact
+    attributes:
+      label: "‏تَأثيرُ الميزةِ عَلى تَخطيطِ لَوحةِ المَفاتيح"
+      description: "‏هَل تَتَطَلَّبُ هَٰذِهِ الميزةُ تَغييراتٍ في أَيٍّ مِمَّا يَلي؟"
+      options:
+        - label: تَتَطَلَّبُ هَٰذِهِ الميزةُ تَغييراتٍ في تَخطيطِ لَوحةِ المَفاتيح
+        - label: تَتَطَلَّبُ هَٰذِهِ الميزةُ تَغييراتٍ في قَواعِدِ لَوحةِ المَفاتيح
+        - label: تَتَطَلَّبُ هَٰذِهِ الميزةُ تَغييراتٍ في تَوثيقِ لَوحةِ المَفاتيح
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: "‏مَعلوماتٌ أَو سِياقٌ إضافِيٌّ"
+      description: "‏أَضِف أَيَّ سِياقٍ أَو صُوَرٍ أَو مَعلوماتٍ إضافِيّةٍ حَولَ طَلَبِ الميزةِ هُنا."
+      placeholder: "‏سِياق، لَقَطاتُ شاشة، أَو مَشاكِلُ ذاتُ صِلة."
