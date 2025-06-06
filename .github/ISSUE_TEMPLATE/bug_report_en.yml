@@ -1,6 +1,6 @@
 name: "🐞 Bug Report"
-description: "Report a bug in the `Arabiyy` keyboard"
-title: "[Bug] "
+description: "Report a bug in the Arabiyy keyboard"
+title: "Bug: "
 labels: ["bug"]
 assignees: []
 
@@ -56,7 +56,7 @@ body:
   - type: checkboxes
     id: arabiyy-keyboard
     attributes:
-      label: "`Arabiyy` keyboard type"
+      label: "Arabiyy keyboard type"
       description: "Which version of the Arabiyy keyboard are you using?"
       options:
         - label: Arabiyy
