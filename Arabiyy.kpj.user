@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<KeymanDeveloperProjectUser>
+  <ViewState>
+    <tab>1</tab>
+    <showhelp>0</showhelp>
+    <path>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\Arabiyy.kpj</path>
+  </ViewState>
+  <FileStates>
+    <FileState>
+      <ID>id_9275a585d651655da63f2ee1016ca521</ID>
+      <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\Arabiyy.kpj</FullPath>
+    </FileState>
+    <FileState>
+      <ID>id_49ff702323b425d0bba7a9096519ac46</ID>
+      <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\Arabiyy.kpj.user</FullPath>
+    </FileState>
+    <FileState>
+      <ID>id_ab61bc4859f65d5f573e6af062cf9360</ID>
+      <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\LICENSE-ar.md</FullPath>
+    </FileState>
+    <FileState>
+      <ID>id_f1650dccb105a8ba96aa1b10bf81d315</ID>
+      <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\LICENSE-en.md</FullPath>
+    </FileState>
+    <FileState>
+      <ID>id_0730bb7c2e8f9ea2438b52e419dd86c9</ID>
+      <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\README.md</FullPath>
+    </FileState>
+    <FileState>
+      <ID>id_933cc72decec03d937fe65ae2e9ee627</ID>
+      <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\source\Arabiyy.ico</FullPath>
+    </FileState>
+    <FileState>
+      <ID>id_6944cd6e8c40e0bb758b532bba5079f4</ID>
+      <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\source\Arabiyy.keyman-touch-layout</FullPath>
+    </FileState>
+    <FileState>
+      <ID>id_219d128077422d22f82f31217eb8b4f7</ID>
+      <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\source\Arabiyy.kmn</FullPath>
+      <IDEState>
+        <LayoutDisplay102Key>0</LayoutDisplay102Key>
+        <DebugDefaultFont>0</DebugDefaultFont>
+        <DebugFont>KFGQPC KSA Regular|16|B  |178</DebugFont>
+        <CodeFont>Consolas|14|   |0</CodeFont>
+        <CharFont>Consolas|14|   |0</CharFont>
+      </IDEState>
+      <Debug>True</Debug>
+    </FileState>
+    <FileState>
+      <ID>id_7e2d1569271b3facd0719443cfe6eda4</ID>
+      <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\source\Arabiyy.kps</FullPath>
+    </FileState>
+    <FileState>
+      <ID>id_51a4748a065e56ce4742707f41a9f4c0</ID>
+      <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\source\Arabiyy.kvks</FullPath>
+    </FileState>
+    <FileState>
+      <ID>id_b60f9d9797f2468be4fbf5fafff95481</ID>
+      <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\source\ArabiyyNumOnShift.kmn</FullPath>
+      <IDEState>
+        <LayoutDisplay102Key>0</LayoutDisplay102Key>
+        <DebugDefaultFont>1</DebugDefaultFont>
+        <DebugFont>Consolas|14|   |0</DebugFont>
+        <CodeFont>Consolas|14|   |0</CodeFont>
+        <CharFont>Consolas|14|   |0</CharFont>
+      </IDEState>
+      <Debug>False</Debug>
+    </FileState>
+    <FileState>
+      <ID>id_dda80b6081e70df3fecdbe043144a6d9</ID>
+      <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\source\..\build\Arabiyy.kmx</FullPath>
+    </FileState>
+    <FileState>
+      <ID>id_23484b17c44dea681a824e65bd013327</ID>
+      <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\source\..\build\Arabiyy.js</FullPath>
+    </FileState>
+    <FileState>
+      <ID>id_6ae23dd97e5f57b3f69843341ea954f0</ID>
+      <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\source\..\build\Arabiyy.kvk</FullPath>
+    </FileState>
+    <FileState>
+      <ID>id_356e5d149c1e539356d72698c1e401a6</ID>
+      <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\source\welcome.htm</FullPath>
+    </FileState>
+    <FileState>
+      <ID>id_8da344c4cea6f467013357fe099006f5</ID>
+      <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\source\readme.htm</FullPath>
+    </FileState>
+    <FileState>
+      <ID>id_c296b5df3dc126e219e0173fcbc1baec</ID>
+      <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\source\..\LICENSE.md</FullPath>
+    </FileState>
+  </FileStates>
+  <MRU>
+    <File>
+      <ID>id_MRU0</ID>
+      <Filename>Arabiyy.kmn</Filename>
+      <FileType>.kmn</FileType>
+      <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\source\Arabiyy.kmn</FullPath>
+    </File>
+    <File>
+      <ID>id_MRU1</ID>
+      <Filename>ArabiyyNumOnShift.kmn</Filename>
+      <FileType>.kmn</FileType>
+      <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\source\ArabiyyNumOnShift.kmn</FullPath>
+    </File>
+  </MRU>
+</KeymanDeveloperProjectUser>
