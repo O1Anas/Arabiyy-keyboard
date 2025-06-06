@@ -1,0 +1,70 @@
+name: "🐞 Bug Report"
+description: "Report a bug in the `Arabiyy` keyboard"
+title: "[Bug] "
+labels: ["bug"]
+assignees: []
+
+body:
+  - type: textarea
+    id: problem-description
+    attributes:
+      label: "What is the problem?"
+      description: "Clearly and concisely describe the issue you’re experiencing."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: "How can we reproduce it?"
+      description: "List detailed steps to reproduce the bug."
+      placeholder: |
+        1. Open '...'
+        2. Type '...'
+        3. Observe the issue
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: "What did you expect to happen?"
+      description: "Describe what you expected to see instead of the bug."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: context-product
+    attributes:
+      label: "Keyman platform"
+      description: "Which Keyman app(s) are you using?"
+      options:
+        - label: Keyman for Android
+        - label: Keyman for iPhone and iPad
+        - label: Keyman for Linux
+        - label: Keyman for macOS
+        - label: Keyman for Windows
+        - label: Keyman Developer
+        - label: KeymanWeb
+
+  - type: input
+    id: keyman-version
+    attributes:
+      label: "Keyman app version"
+      placeholder: "e.g. 16.0.140"
+
+  - type: checkboxes
+    id: arabiyy-keyboard
+    attributes:
+      label: "`Arabiyy` keyboard type"
+      description: "Which version of the Arabiyy keyboard are you using?"
+      options:
+        - label: Arabiyy
+        - label: ArabiyyNumOnShift
+        - label: ArabiyyMobile
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: "Anything else?"
+      description: "Add logs, screenshots, related issues, or other helpful information."
