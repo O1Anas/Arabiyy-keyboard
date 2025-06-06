@@ -27,18 +27,21 @@ def normalize_tashkeel(text):
     # Rule 6: Remove fatha before alif maqsura
     normalized = re.sub(r'َ(?=ى[^ًٌٍََُِّ])', '', normalized)
     
-    # Rule 9: Remove kasra after alif with hamza below
+    # Rule 7: Remove kasra after alif with hamza below
     normalized = re.sub(r'إِ', 'إ', normalized)
     
-    # Rule 10: Fix alif variants at start of lines or after numbers
+    # Rule 8: Fix alif variants at start of lines or after numbers
     normalized = re.sub(r'(^|\d\.\s*)اُ', r'\1أُ', normalized, flags=re.MULTILINE)
     normalized = re.sub(r'(^|\d\.\s*)اِ', r'\1إ', normalized, flags=re.MULTILINE)
     normalized = re.sub(r'(^|\d\.\s*)اَ', r'\1أ', normalized, flags=re.MULTILINE)
     
-    # Rules 7, 8, 11, 12: Remove tashkeel before/after specific contexts (MERGED)
+    # Rule 9: Remove all tashkeel on alif
+    normalized = re.sub(r'ا[ًٌٍَُِ]', 'ا', normalized)
+    
+    # Rules 10, 11, 12: Remove tashkeel before/after specific contexts (MERGED)
     # This combines all the positional tashkeel removal rules
     positional_patterns = [
-        # Rule 7: Remove all tashkeel at end of line (including before markdown and punctuation)
+        # Rule 10: Remove all tashkeel at end of line (including before markdown and punctuation)
         (r'[ًٌٍََُِ]+(?=\s*[*:]*\s*$)', '', re.MULTILINE),
         
         # Rule 11: Remove tanween at end of title-like text
@@ -46,20 +49,19 @@ def normalize_tashkeel(text):
         
         # Rule 12: Remove all tashkeel before punctuation marks
         # Extended to include all your specified punctuation: ?, :, !, {, }, [, ], |, ", ', *, ?, ;
-        (r'[ًٌٍََُِ]+(?=\s*[.،\[\](){}|:"\';!?*])', '', 0),
+        (r'[ًٌٍََُِ]+(?=\s*[.،\[\](){}|:"\';!?*؟])', '', 0),
     ]
     
     # Rule 13: Remove space between و and ا at start of lines or after spaces
     normalized = re.sub(r'(^|\s)و ا', r'\1وا', normalized, flags=re.MULTILINE)
     
-
     for pattern, replacement, flags in positional_patterns:
         if flags:
             normalized = re.sub(pattern, replacement, normalized, flags=flags)
         else:
             normalized = re.sub(pattern, replacement, normalized)
     
-    # Rule 8: Remove all tashkeel at end of sentence (except tanween and shadda)
+    # Rule 14: Remove all tashkeel at end of sentence (except tanween and shadda)
     # Handle sentence endings separately to preserve tanween and shadda
     sentences = re.split(r'([.،])', normalized)
     

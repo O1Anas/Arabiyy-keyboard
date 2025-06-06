@@ -1,0 +1,63 @@
+name: "🐞 تَقريرُ خَطَأ‎"
+description: "الإبلاغُ عَن خَطَإٍ في لَوحةِ المَفاتيحِ العَرَبِيّةِ‎"
+title: "خَطَأ:‎ "
+labels: ["bug"]
+assignees: []
+body:
+  - type: textarea
+    id: problem-description
+    attributes:
+      label: "ما هِيَ المُشكِلة؟"
+      description: "اوصِفِ المُشكِلةَ الَّتي تواجِهُها بِوُضوحٍ وَإيجاز."
+    validations:
+      required: true
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: "كَيفَ يُمكِنُنا إعادةُ إنتاجِ المُشكِلة؟"
+      description: "اذكُرِ الخُطواتِ التَّفصيلِيّةَ لِإعادةِ إنتاجِ الخَطَإ."
+      placeholder: |
+        1. إفتَح '...'
+        2. أُكتُب '...'
+        3. لاَحِظِ المُشكِلة
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: "ما الَّذي تَوَقَّعتَ حُدوثَه؟"
+      description: "اوصِف ما تَوَقَّعتَ رُؤيَتَهُ بَدَلاً مِنَ الخَطَإ."
+    validations:
+      required: false
+  - type: checkboxes
+    id: context-product
+    attributes:
+      label: "مِنَصّةُ Keyman"
+      description: "أَيُّ تَطبيقِ Keyman تَستَخدِم؟"
+      options:
+        - label: Keyman لِنِظامِ Android
+        - label: Keyman لِنِظامِ iPhone وَ iPad
+        - label: Keyman لِنِظامِ Linux
+        - label: Keyman لِنِظامِ macOS
+        - label: Keyman لِنِظامِ Windows
+        - label: Keyman Developer
+        - label: KeymanWeb
+  - type: input
+    id: keyman-version
+    attributes:
+      label: "إصدارُ تَطبيقِ Keyman"
+      placeholder: "مِثال: 16.0.140"
+  - type: checkboxes
+    id: arabiyy-keyboard
+    attributes:
+      label: "نَوعُ لَوحةِ المَفاتيحِ العَرَبِيّة"
+      description: "أَيُّ إصدارٍ مِن لَوحةِ المَفاتيحِ العَرَبِيّةِ تَستَخدِم؟"
+      options:
+        - label: Arabiyy
+        - label: ArabiyyNumOnShift
+        - label: ArabiyyMobile
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: "أَيُّ مَعلوماتٍ إضافِيّة؟"
+      description: "أَضِف سِجِلاَّت، لَقَطاتِ شاشة، مَشاكِلَ ذاتَ صِلة، أَو مَعلوماتٍ مُفيدةً أُخرى."
