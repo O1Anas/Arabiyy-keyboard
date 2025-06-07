@@ -141,7 +141,7 @@ jobs:
           echo "Running tashkeel normalizer on all .md files (excluding LICENSE files)..."
 
           # Find all .md files in the repository, excluding files with "LICENSE" in their name
-          find . -name "*.md" -type f | grep -v -i "LICENSE" | while read -r file; do
+          find . -name "*.md" -type f | grep -v -i "LICENSE" | grep -v -i "-en" | while read -r file; do
             echo "Processing: $file"
 
             # Create a temporary Python script to process the file in batch mode
@@ -197,7 +197,7 @@ jobs:
             CHANGELOG_CONTENT="No specific changelog found for this version. Please check 'source/Docs/CHANGELOG.md'."
           fi
 
-          FULL_CHANGELOG_SECTION="## v${{ env.KMN_COMMON_VERSION }}\n\n$CHANGELOG_CONTENT"
+          FULL_CHANGELOG_SECTION="$CHANGELOG_CONTENT"
 
           echo "CHANGELOG_CONTENT<<EOF" >> $GITHUB_ENV
           echo "$FULL_CHANGELOG_SECTION" >> $GITHUB_ENV
@@ -219,6 +219,40 @@ jobs:
           echo "$DOWNLOAD_GUIDE_CONTENT" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
 
+      - name: Create Versioned Build Files
+        id: create_versioned_files
+        run: |
+          # Create versioned copies of build files
+          VERSION="${{ env.KMN_COMMON_VERSION }}"
+          echo "Creating versioned copies of build files with version: $VERSION"
+
+          # Define the build files to version
+          declare -a BUILD_FILES=(
+            "build/Arabiyy.kmx"
+            "build/ArabiyyNumOnShift.kmx"
+            "build/arabiyymobile.kmp"
+          )
+
+          # Create versioned copies
+          for file in "${BUILD_FILES[@]}"; do
+            if [ -f "$file" ]; then
+              # Extract filename and extension
+              filename=$(basename "$file")
+              extension="${filename##*.}"
+              basename_no_ext="${filename%.*}"
+              directory=$(dirname "$file")
+
+              # Create versioned filename
+              versioned_file="${directory}/${basename_no_ext}-V${VERSION}.${extension}"
+
+              # Copy the file with versioned name
+              cp "$file" "$versioned_file"
+              echo "Created: $versioned_file"
+            else
+              echo "Warning: $file not found, skipping versioned copy"
+            fi
+          done
+
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
@@ -228,10 +262,12 @@ jobs:
           prerelease: false
           make_latest: true
           files: |
-            build/Arabiyy.kmx
-            build/ArabiyyNumOnShift.kmx
-            build/arabiyymobile.kmp
+            build/Arabiyy-V${{ env.KMN_COMMON_VERSION }}.kmx
+            build/ArabiyyNumOnShift-V${{ env.KMN_COMMON_VERSION }}.kmx
+            build/arabiyymobile-V${{ env.KMN_COMMON_VERSION }}.kmp
           body: |
+            <div align="center"><h1>Changes - التَّغَيُّرات</h1></div>
+            
             ${{ env.CHANGELOG_CONTENT }}
 
             ---
@@ -240,7 +276,7 @@ jobs:
 
             ---
 
-            **Full Changelog**: [`${{ env.PREVIOUS_VERSION }}`](https://github.com/O1Anas/Arabiyy-keyboard/compare/${{ env.PREVIOUS_VERSION }}...v${{ env.KMN_COMMON_VERSION }})
+            **Full Changelog**: [`${{ env.KMN_COMMON_VERSION }}`](https://github.com/O1Anas/Arabiyy-keyboard/compare/${{ env.PREVIOUS_VERSION }}...v${{ env.KMN_COMMON_VERSION }})
 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
