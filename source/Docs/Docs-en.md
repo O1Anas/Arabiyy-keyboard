@@ -210,7 +210,7 @@ You can cycle through related letters using `/`, the list of rotations is:
 
 ## 9. Diacritic overriding rule
 Any diacritic written overrides the previous diactrict
-![Preview-Tashkeel](Visuals/preview-tashkeel-overriding.gif)
+![Preview-Tashkeel](../Visuals/preview-tashkeel-overriding.gif)
 
 # Usage Advice
 - You can bypass the previously mentioned rules/shortcuts by adding tashkeel between their components.
