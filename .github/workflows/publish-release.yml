@@ -53,8 +53,8 @@ jobs:
           # Initialize an array to store extracted versions
           declare -a versions
 
-          # Find all .kmn files and extract their versions
-          find . -type f -name "*.kmn" | while read -r file; do
+          # Find all .kmn files and extract their versions using process substitution
+          while IFS= read -r -d '' file; do
             VERSION=$(grep -oP "store\(&KEYBOARDVERSION\) '\K[^']+" "$file")
             if [ -z "$VERSION" ]; then
               echo "Error: Could not find version in '$file'."
@@ -63,7 +63,7 @@ jobs:
             fi
             echo "Found version '$VERSION' in '$file'"
             versions+=("$VERSION")
-          done
+          done < <(find . -type f -name "*.kmn" -print0)
 
           # Check if any .kmn files were found
           if [ ${#versions[@]} -eq 0 ]; then
