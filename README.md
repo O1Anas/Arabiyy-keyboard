@@ -1,4 +1,4 @@
-![Banner](Visuals/Banner.png)
+![Banner](source/Visuals/Banner.png)
 <div align="center">
   <h1>Arabiyy - عَرَبِيّ</h1>
 </div>
@@ -19,20 +19,20 @@
   <h2>Arabiyy in action - عَرَبِيّ قَيدَ الإستِخدام</h2>
 </div>
 
-![Preview](Visuals/preview-maa-wahannaa.gif)
+![Preview](source/Visuals/preview-maa-wahannaa.gif)
 <details align="center"><summary>
 
 #### ‎"‎قُم" Preview
 
 </summary>
-  <img src="Visuals/preview-9om.gif">
+  <img src="source/Visuals/preview-9om.gif">
 </details>
 <details align="center"><summary>
 
 #### ‎"‎وَديني دينُ عِزٍّ" Preview
 
 </summary>
-  <img src="Visuals/preview-diino-3izz.gif">
+  <img src="source/Visuals/preview-diino-3izz.gif">
 </details>
 
 <div align="center"><a href="https://github.com/Safouene1/support-palestine-banner/blob/master/Markdown-pages/Support.md"><img src="https://raw.githubusercontent.com/Safouene1/support-palestine-banner/master/banner-support.svg" alt="Support Palestine" style="width: 100%;"></a></div>

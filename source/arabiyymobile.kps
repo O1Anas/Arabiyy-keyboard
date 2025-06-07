@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package>
+  <System>
+    <KeymanDeveloperVersion>17.0.335.0</KeymanDeveloperVersion>
+    <FileVersion>7.0</FileVersion>
+  </System>
+  <Options>
+    <ExecuteProgram></ExecuteProgram>
+    <MSIFileName></MSIFileName>
+    <MSIOptions></MSIOptions>
+  </Options>
+  <StartMenu>
+    <Folder></Folder>
+    <Items/>
+  </StartMenu>
+  <Info>
+    <Version URL="">1.00</Version>
+    <Name URL="">Arabiyy - عَرَبِيّ</Name>
+    <Copyright URL="">Copyright 2024 © Anas - أنَس عِمران</Copyright>
+  </Info>
+  <Files>
+    <File>
+      <Name>..\build\arabiyymobile.js</Name>
+      <Description>File arabiyymobile.js</Description>
+      <CopyLocation>0</CopyLocation>
+      <FileType>.js</FileType>
+    </File>
+    <File>
+      <Name>..\build\arabiyymobile.kmx</Name>
+      <Description>Keyboard Arabiyy - عَرَبِيّ</Description>
+      <CopyLocation>0</CopyLocation>
+      <FileType>.kmx</FileType>
+    </File>
+    <File>
+      <Name>..\build\arabiyymobile.kvk</Name>
+      <Description>File arabiyymobile.kvk</Description>
+      <CopyLocation>0</CopyLocation>
+      <FileType>.kvk</FileType>
+    </File>
+  </Files>
+  <Keyboards>
+    <Keyboard>
+      <Name>Arabiyy - عَرَبِيّ</Name>
+      <ID>arabiyymobile</ID>
+      <Version>1.00</Version>
+      <RTL>True</RTL>
+      <Languages>
+        <Language ID="ar">Arabic</Language>
+      </Languages>
+    </Keyboard>
+  </Keyboards>
+  <Strings/>
+</Package>

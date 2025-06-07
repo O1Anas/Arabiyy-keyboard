@@ -4,6 +4,7 @@
     <tab>1</tab>
     <showhelp>0</showhelp>
     <path>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\Arabiyy.kpj</path>
+    <file ID="id_05f038576509a4bf5bcc0c1680ccad78" Expanded="1"/>
   </ViewState>
   <FileStates>
     <FileState>
@@ -27,6 +28,10 @@
       <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\README.md</FullPath>
     </FileState>
     <FileState>
+      <ID>id_cdfabe6601b01f772b4745029b485db5</ID>
+      <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\source\Arabiyy.css</FullPath>
+    </FileState>
+    <FileState>
       <ID>id_933cc72decec03d937fe65ae2e9ee627</ID>
       <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\source\Arabiyy.ico</FullPath>
     </FileState>
@@ -43,16 +48,50 @@
         <DebugFont>KFGQPC KSA Regular|16|B  |178</DebugFont>
         <CodeFont>Consolas|14|   |0</CodeFont>
         <CharFont>Consolas|14|   |0</CharFont>
+        <DisplayMapFont>Consolas|-9|   |0</DisplayMapFont>
       </IDEState>
       <Debug>True</Debug>
     </FileState>
     <FileState>
       <ID>id_7e2d1569271b3facd0719443cfe6eda4</ID>
       <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\source\Arabiyy.kps</FullPath>
+      <IDEState>
+        <CodeFont>Consolas|-9|   |0</CodeFont>
+        <CharFont>Consolas|-9|   |0</CharFont>
+      </IDEState>
     </FileState>
     <FileState>
       <ID>id_51a4748a065e56ce4742707f41a9f4c0</ID>
       <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\source\Arabiyy.kvks</FullPath>
+    </FileState>
+    <FileState>
+      <ID>id_d3e5cb534ae8a87dcc9c632ae84401cc</ID>
+      <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\source\arabiyymobile.keyman-touch-layout</FullPath>
+    </FileState>
+    <FileState>
+      <ID>id_6473a973a07e912132130281a5e1f2fb</ID>
+      <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\source\arabiyymobile.kmn</FullPath>
+      <IDEState>
+        <LayoutDisplay102Key>0</LayoutDisplay102Key>
+        <DebugDefaultFont>1</DebugDefaultFont>
+        <DebugFont>Consolas|14|   |0</DebugFont>
+        <CodeFont>Consolas|14|   |0</CodeFont>
+        <CharFont>Consolas|14|   |0</CharFont>
+        <DisplayMapFont>Consolas|-9|   |0</DisplayMapFont>
+      </IDEState>
+      <Debug>True</Debug>
+    </FileState>
+    <FileState>
+      <ID>id_05f038576509a4bf5bcc0c1680ccad78</ID>
+      <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\source\arabiyymobile.kps</FullPath>
+      <IDEState>
+        <CodeFont>Consolas|-9|   |0</CodeFont>
+        <CharFont>Consolas|-9|   |0</CharFont>
+      </IDEState>
+    </FileState>
+    <FileState>
+      <ID>id_4fed6180d6f3e4a461cc525a23d01d43</ID>
+      <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\source\arabiyymobile.kvks</FullPath>
     </FileState>
     <FileState>
       <ID>id_b60f9d9797f2468be4fbf5fafff95481</ID>
@@ -63,8 +102,9 @@
         <DebugFont>Consolas|14|   |0</DebugFont>
         <CodeFont>Consolas|14|   |0</CodeFont>
         <CharFont>Consolas|14|   |0</CharFont>
+        <DisplayMapFont>Consolas|-9|   |0</DisplayMapFont>
       </IDEState>
-      <Debug>False</Debug>
+      <Debug>True</Debug>
     </FileState>
     <FileState>
       <ID>id_dda80b6081e70df3fecdbe043144a6d9</ID>
@@ -90,19 +130,49 @@
       <ID>id_c296b5df3dc126e219e0173fcbc1baec</ID>
       <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\source\..\LICENSE.md</FullPath>
     </FileState>
+    <FileState>
+      <ID>id_1f489b62c0a8aaf8be18c7ee372c13b4</ID>
+      <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\source\..\build\arabiyymobile.js</FullPath>
+    </FileState>
+    <FileState>
+      <ID>id_8582d71ee0d3484bfcf293d37621b3b6</ID>
+      <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\source\..\build\arabiyymobile.kmx</FullPath>
+    </FileState>
+    <FileState>
+      <ID>id_777c805343c411a7d9cc206fee42d6f2</ID>
+      <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\source\..\build\arabiyymobile.kvk</FullPath>
+    </FileState>
   </FileStates>
   <MRU>
     <File>
       <ID>id_MRU0</ID>
+      <Filename>ArabiyyNumOnShift.kmn</Filename>
+      <FileType>.kmn</FileType>
+      <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\source\ArabiyyNumOnShift.kmn</FullPath>
+    </File>
+    <File>
+      <ID>id_MRU1</ID>
+      <Filename>ArabiyyMobile.kmn</Filename>
+      <FileType>.kmn</FileType>
+      <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\source\ArabiyyMobile.kmn</FullPath>
+    </File>
+    <File>
+      <ID>id_MRU2</ID>
       <Filename>Arabiyy.kmn</Filename>
       <FileType>.kmn</FileType>
       <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\source\Arabiyy.kmn</FullPath>
     </File>
     <File>
-      <ID>id_MRU1</ID>
-      <Filename>ArabiyyNumOnShift.kmn</Filename>
-      <FileType>.kmn</FileType>
-      <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\source\ArabiyyNumOnShift.kmn</FullPath>
+      <ID>id_MRU3</ID>
+      <Filename>ArabiyyMobile.kps</Filename>
+      <FileType>.kps</FileType>
+      <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\source\ArabiyyMobile.kps</FullPath>
+    </File>
+    <File>
+      <ID>id_MRU4</ID>
+      <Filename>Arabiyy.kps</Filename>
+      <FileType>.kps</FileType>
+      <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\source\Arabiyy.kps</FullPath>
     </File>
   </MRU>
 </KeymanDeveloperProjectUser>

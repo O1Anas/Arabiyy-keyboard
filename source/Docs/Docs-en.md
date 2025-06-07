@@ -31,6 +31,8 @@ However, latin vowel letters are mapped to diacritics, & double pressing on a di
   - + `o` (another damma) turns it into `و` (waw)
   - + `o` (another damma) turns it into `ؤ` (Waw with Hamza Above)
 
+**Note:** `u` has the same functionality as `o`
+
 - `e` is set to ` ْ` (sukoon)
   - + `e` (another sukoon) turns it into ` ّ` (shadda)
   - + `e` (another sukoon) turns it into ` ٓ` (maddah above)
@@ -39,7 +41,6 @@ However, latin vowel letters are mapped to diacritics, & double pressing on a di
 - `w` is set to `و` (waw / wāw)
 - `y` is set to `ي` (ya' / yāʼ)
 - `g` is set to `غ` (ghayn / ḡayn)
-- `u` is not set to any character
 - `p` is not set to any character
 
 Latin characters that are not in arabic are set in this way (to benefit from their space & not leave them empty):
@@ -67,15 +68,18 @@ Repeated consonants (`‎و` & `‎ي` as well) automatically receive a shadda (
 - Even `‎طّ`, `‎صّ`, `‎ضّ` & `‎خّ` can be written even though they aren't directly bound with any phonetic key on the keyboard
 
 ## 2. Islamic Keyword Shortcuts 💖
-- `allah` becomes `اللَّه`
+- `allah` or `elah` becomes `اللَّه`
   - `wallah` or `welah` becomes `واللَّه`
-- `bismillah` becomes `بِسمِ اللَّهِ`
-- `/bismillah`  becomes `بِسمِ اللَّهِ الرَّحمٰنِ الرَّحِيم`
+- `bismillah` (`‏بِسمِلَّه`) becomes `بِسمِ اللَّه`
+- `/bismillah` (`‏/بِسمِلَّه`)  becomes `بِسمِ اللَّهِ الرَّحمٰنِ الرَّحِيم`
+- `//bismillah` (`‏//بِسمِلَّه`)  becomes `﷽`
 - `/swt` (`‏/سوت`) becomes `سُبْحَانَهُ وَتَعَالَىٰ`
 - `/twt` (`‏/توت`) becomes `تَبَارَكَ وَتَعَالَىٰ`
-- `/azwj` (`‏/أزوج`/`‏/َزوج`) / `3zwj` (`‏/عزوج`) becomes `عَزَّ وَجَلَّ`
-- `/jj` (`‏/جج`) becomes `جَلَّ جَلَالُهُ`
-- `/Saw` (`‏/صَو`) / `saw` (`‏/سَو`) becomes `صَلَّى ٱللَّٰهُ عَلَيهِۦ وَسَلَّمَ`
+- `/azwj` (`‏/أزوج`/`‏/َزوج`) / `3zwj` (`‏/عزوج`) becomes `عَزَّ وَجَلَ`
+- `/jj` (`‏/جج`) becomes `جَلَّ جَلَالُه`
+- `//jj` (`‏//جج`) becomes `ﷻ`
+- `/Saw` (`‏/صَو`) or `/saw` (`‏/سَو`) becomes `صَلَّى ٱللَّٰهُ عَلَيهِۦ وَسَلَّم`
+- `//Saw` (`‏//صَو`) or `//saw` (`‏//سَو`) becomes `ﷺ`
 
 **Companion related:**
 - `/ra` (`‏/رَ`) becomes `رَضِيَ ٱللَّٰهُ عَنهُ` (add `aa` for a female companion 😊)
@@ -146,7 +150,7 @@ Initial `e` + consonant becomes `ال` + that consonant with a shadda on it
 
 Shortcut for `بِال` is `bie`, (works for "لام الشَمسِيَّه")
 - ex: `bieshhams` = `بِالشَّمس`
-- Note: this shortcut only gets applied when a consonant is written after it.
+- **Note:** this shortcut only gets applied when a consonant is written after it.
 
 After these letters: `ب` (b), `ف` (f), `و` (w), `ك` (k) and `أ` (a), (with or without diacritics), write `ee` (` ّ`) followed by a letter to add an `ا` (madd) before that letter
 - ex: `bieesti3jaal` = `بِاستِعجال` (with haste).
@@ -195,11 +199,11 @@ After a letter:
 - Type `allaaty` to get `اللّاتي`
 - Type `allaa2y` to get `اللّائي`
 
-- Note: (`y` or `ii` at the end of these rules produce the same result)
+- **Note:** (`y` or `ii` at the end of these rules produce the same result)
 
 ### demonstrative Pronouns
-- Type `haa2oolaa2` to get `هَـٰؤُلاء` (these/those)
-- Type `olaa2ik` to get `أولَـٰئِك`  (those)
+- Type `haa2oolaa2` to get `هـٰؤُلاء` (these/those)
+- Type `olaa2ik` to get `أولـٰئِك`  (those)
 
 ## 8. Letter Rotation Mechanism
 You can cycle through related letters using `/`, the list of rotations is:
@@ -210,7 +214,7 @@ You can cycle through related letters using `/`, the list of rotations is:
 
 ## 9. Diacritic overriding rule
 Any diacritic written overrides the previous diactrict
-![Preview-Tashkeel](/Visuals/preview-tashkeel-overriding.gif)
+![Preview-Tashkeel](/source/Visuals/preview-tashkeel-overriding.gif)
 
 # Usage Advice
 - You can bypass the previously mentioned rules/shortcuts by adding tashkeel between their components.

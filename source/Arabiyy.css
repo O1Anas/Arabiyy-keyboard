@@ -1,0 +1,25 @@
+.kmw-key {background-color: black !important;}
+.kmw-key-touched, .kmw-key#default-K_F11, .kmw-key#default-K_F4, .kmw-key#default-K_COLON, .kmw-key#default-K_SLASH, .kmw-key#default-K_E {
+	color: white !important;
+	background-color: midnightblue !important;
+	border: 1px solid white !important;
+}
+
+/* .kmw-key-touched {display: none !important;} */
+/* .kmw-osk-frame {position: sticky !important;bottom: 0px !important;} */
+
+/* .kmw-banner-bar {display: none !important;} */
+
+.kmw-key#default-K_A, 
+.kmw-key#default-K_O, 
+.kmw-key#default-K_I {
+	color: white !important;
+	background-color: green !important;
+}
+
+.kmw-keytip-tip, .kmw-keytip-cap {
+	color: white !important;
+	background-color: midnightblue !important;
+}
+
+.kmw-key-layer-group {background-color: #010130 !important;}

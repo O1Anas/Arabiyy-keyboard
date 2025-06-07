@@ -1,192 +1,188 @@
 ﻿store(&Version) '17.0'
-store(&TARGETS) 'any'
-store(&mnemoniclayout) '1'
+store(&TARGETS) 'mobile'
+c store(&mnemoniclayout) '0'
 
 store(&COPYRIGHT) 'Copyright 2024 © Anas - أنَس عِمران'
 
-store(&KEYBOARDVERSION) '1.1'
+store(&KEYBOARDVERSION) '1.00'
 store(&BITMAP) 'Arabiyy.ico'
+store(&kmw_embedcss) 'Arabiyy.css'
 
 c store(&ETHNOLOGUECODE) 'arb ara aao arq bbz abv shu acy adf avl arz afb ayh acw ayl acm ary ars apc ayp acx aec ayn ssh ajp pga apd acq abh aeb auz'
 c store(&LANGUAGE) 'x0401'
 c store(&WINDOWSLANGUAGES) 'x0401'
 store(&KMW_RTL) '1'
 store(&NAME) 'Arabiyy - عَرَبِيّ'
+store(&LAYOUTFILE) 'arabiyymobile.keyman-touch-layout'
+store(&VISUALKEYBOARD) 'arabiyymobile.kvks'
 
 begin Unicode > use(main)
 
 store(cons) 'ذ' 'ظ' 'خ' 'ح' 'ض' 'ص' 'ى' 'ط' 'م' 'ن' 'ب' 'ث' 'ش' 'ز' 'ل' 'ك' 'ج' 'ه' 'غ' 'ف' 'د' 'س' 'ع' 'ت' 'ر' 'ق'
 store(vowel) 'اوي'
-store(consOrVowel) 'ذ' 'ظ' 'خ' 'ح' 'ض' 'ص' 'ى' 'ط' 'م' 'ن' 'ب' 'ث' 'ش' 'ز' 'ل' 'ك' 'ج' 'ه' 'غ' 'ف' 'د' 'س' 'ع' 'ت' 'ر' 'ق' 'اوي'
 store(tanween) 'ً' 'ٌ' 'ٍ'
-store(diacritic) 'َ' 'ُ' 'ِ' 'ّ'
+store(diacritic) 'ُ' 'َ' 'ِ' 'ّ'
 store(FathaVariant) 'َ' 'أ' 'ا'
 store(thing) 'ة' 'ُ' 'َ' 'ِ' 'ّ' 'ً' 'ٌ' 'ٍ' 'أ' 'ءاوي' 'ذ' 'ظ' 'خ' 'ح' 'ض' 'ص' 'ى' 'ط' 'م' 'ن' 'ب' 'ث' 'ش' 'ز' 'ل' 'ك' 'ج' 'ه' 'غ' 'ف' 'د' 'س' 'ع' 'ت' 'ر' 'ق'
 c store(alif) 'أُ' 'أ' 'إ'
 
 group(main) using keys
 
-+ ' ' > ' '
++ [K_SPACE] > ' '
 
-+ 'à' > dk(none)
-+ '0' > '0'
++ [K_F10] > 'ض'
++ [SHIFT K_0] > '('
 
-+ '&' > dk(none)
-+ '1' > '1'
++ [K_F1] > 'ث'
++ [SHIFT K_1] > '!'
 
-+ 'é' > 'ء'
-+ '2' > '2'
++ [K_F2] > 'ء'
++ [SHIFT K_2] > '@'
 
-+ '"' > 'ع'
-+ '3' > '3'
++ [K_F3] > 'ع'
++ [SHIFT K_3] > '#'
 
-+ "'" > "'"
-+ '4' > '4'
++ [K_F4] > 'ۚ'
++ [SHIFT K_4] > '$'
 
-+ '(' > 'خ'
-+ '5' > '5'
++ [K_F5] > 'خ'
++ [SHIFT K_5] > '%'
 
-+ '-' > 'ط'
-+ '6' > '6'
++ [K_F6] > 'ط'
++ [SHIFT K_6] > '^'
 
-+ 'è' > 'ح'
-+ '7' > '7'
++ [K_F7] > 'ح'
++ [SHIFT K_7] > '&'
 
-+ '_' > dk(none)
-+ '8' > '8'
++ [K_F8] > 'ذ'
++ [SHIFT K_8] > '*'
 
-+ 'ç' > 'ق'
-+ '9' > '9'
++ [K_F9] > 'ظ'
++ [SHIFT K_9] > ')'
 
-+ 'a' > 'َ'
-+ 'A' > 'َ '
++ [K_A] > 'َ'
++ [SHIFT K_A] > 'ا'
 
-+ 'b' > 'ب'
-+ 'B' > dk(none)
++ [K_B] > 'ب'
++ [SHIFT K_B] > 'لآ'
 
-+ 'c' > 'ص'
-+ 'C' > '{'
++ [K_C] > 'ص'
++ [SHIFT K_C] > '}'
 
-+ 'd' > 'د'
-+ 'D' > 'ض'
++ [K_D] > 'د'
++ [SHIFT K_D] > ']'
 
-+ 'e' > 'ْ'
-+ 'E' > 'ّ'
++ [K_E] > 'ْ'
++ [SHIFT K_E] > 'ُ'
 
-+ 'f' > 'ف'
-+ 'F' > 'ڤ'
++ [K_F] > 'ف'
++ [SHIFT K_F] > '['
 
-+ 'g' > 'غ'
-+ 'G' > 'ڠ'
++ [K_G] > 'غ'
++ [SHIFT K_G] > 'لأ'
 
-+ 'h' > 'ه'
-+ 'H' > dk(none)
++ [K_H] > 'ه'
++ [SHIFT K_H] > 'أ'
 
-+ 'i' > 'ِ'
-+ 'I' > 'ِ '
++ [K_I] > 'ِ'
++ [SHIFT K_I] > 'ي'
 
-+ 'j' > 'ج'
-+ 'J' > 'ڠ'
++ [K_J] > 'ج'
++ [SHIFT K_J] > 'ـ'
 
-+ 'k' > 'ك'
-+ 'K' > dk(none)
++ [K_K] > 'ك'
++ [SHIFT K_K] > '،'
 
-+ 'l' > 'ل'
-+ 'L' > dk(none)
++ [K_L] > 'ل'
++ [SHIFT K_L] > '/'
 
-+ 'm' > 'م'
-+ 'M' > dk(none)
++ [K_M] > 'م'
++ [SHIFT K_M] > '’'
 
-+ 'n' > 'ن'
-+ 'N' > dk(none)
++ [K_N] > 'ن'
++ [SHIFT K_N] > 'آ'
 
-+ 'o' > 'ُ'
-+ 'O' > 'ُ '
++ [K_O] > 'ُ'
++ [SHIFT K_O] > 'و'
 
-+ 'p' > 'ض'
-+ 'P' > 'پ'
++ [K_P] > 'ح'
++ [SHIFT K_P] > '؛'
 
-+ 'q' > 'ق'
-+ 'Q' > dk(none)
++ [K_Q] > 'ق'
++ [SHIFT K_Q] > 'ِ'
 
-+ 'r' > 'ر'
-+ 'R' > dk(none)
++ [K_R] > 'ر'
++ [SHIFT K_R] > 'ٌ'
 
-+ 's' > 'س'
-+ 'S' > 'ص'
++ [K_S] > 'س'
++ [SHIFT K_S] > 'ٍ'
 
-+ 't' > 'ت'
-+ 'T' > 'ط'
++ [K_T] > 'ت'
++ [SHIFT K_T] > 'لإ'
 
-+ 'u' > 'ُ'
-+ 'U' > '\'
++ [K_U] > 'ع'
++ [SHIFT K_U] > '‘'
 
-+ 'v' > 'ى'
-+ 'V' > 'ڤ'
++ [K_V] > 'ى'
++ [SHIFT K_V] > '{'
 
-+ 'w' > 'و'
-+ 'W' > '['
++ [K_W] > 'و'
++ [SHIFT K_W] > 'ً'
 
-+ 'x' > 'ش'
-+ 'X' > ']'
++ [K_X] > 'ش'
++ [SHIFT K_X] > 'ْ'
 
-+ 'y' > 'ي'
-+ 'Y' > dk(none)
++ [K_Y] > 'ي'
++ [SHIFT K_Y] > 'إ'
 
-+ 'z' > 'ز'
-+ 'Z' > dk(none)
++ [K_Z] > 'ز'
++ [SHIFT K_Z] > '~'
 
-c non-phonetic bindings
++ [K_COMMA] > '،'
++ [SHIFT K_COMMA] > '?'
++ [K_COLON] > '؛'
++ [SHIFT K_COLON] > ':'
++ [K_PERIOD] > '.'
++ [SHIFT K_PERIOD] > '!'
 
-c cc bindings of the numbers row
-+ '²' > '/'
++ [K_1] > '1'
++ [K_2] > '2'
++ [K_3] > '3'
++ [K_4] > '4'
++ [K_5] > '5'
++ [K_6] > '6'
++ [K_7] > '7'
++ [K_8] > '8'
++ [K_9] > '9'
++ [K_0] > '0'
++ [K_F11] > U+200E
 
-+ ')' > '()'
-+ '°' > '°'
++ [K_EQUAL] > '='
++ [SHIFT K_EQUAL] > '+'
 
-+ '=' > '='
-+ '+' > '+'
++ [K_HYPHEN] > '-'
++ [SHIFT K_HYPHEN] > '_'
 
-c cc 2nd line's remaining bindings
-+ 'ù' > '/'
-+ '%' > '٪'
-
-+ '*' >  'ۚ'
-+ 'µ' > '*'
-
-c cc 3rd line's remaining bindings
-+ ',' > '،'
-+ '?' > '؟'
-
-+ ';' > '؛'
-+ '.' > '.'
-
-+ ':' > ':'
-+ '/' > '/'
-
-+ '!' > '!'
-+ '§' > dk(none)
++ [K_SLASH] > '/'
++ [K_LBRKT] > '['
++ [K_RBRKT] > ']'
 
 match > use(post)
 group(post)
 
 c Numbers
-store(digitkey) '0123456789%'
-store(digit) '٠١٢٣٤٥٦٧٨٩٪'
+store(digitkey) '0123456789'
+store(digit) '٠١٢٣٤٥٦٧٨٩'
 store(NumOpt) '0'
 
-'//رقم ' > nul
-'//رقم ' if(NumOpt = '0') > set(NumOpt = '1') save(NumOpt)
-'//رقم ' if(NumOpt = '1') > set(NumOpt = '0') save(NumOpt)
+U+200E > nul
+U+200E if(NumOpt = '0') > set(NumOpt = '1') save(NumOpt)
+U+200E if(NumOpt = '1') > set(NumOpt = '0') save(NumOpt)
 
 any(digitkey) if(NumOpt = '1') > index(digit, 1)
 
 c Shadda
 any(cons) index(cons, 1) > context(1) 'ّ'
-
-'َ ' 'نْ' > 'ً'
-'ُ ' 'نْ' > 'ٌ'
-'ِ ' 'نْ' > 'ٍ'
 
 'و' 'و' > 'وّ'
 'ي' 'ي' > 'يّ'
@@ -199,17 +195,17 @@ any(cons) index(cons, 1) > context(1) 'ّ'
 c Islamic keyword shortcuts 💖
 store(Hotkey) '/' '\'
 
-store(LJOpt) '0'
-'//لج ' > nul
-'//لج ' if(LJOpt='0') > set(LJOpt='1') save(LJOpt)
-'//لج ' if(LJOpt='1') > set(LJOpt='0') save(LJOpt)
-
-any(Hotkey) 'سَلَم' > 'السَّلامُ عَلَيكُم وَرَحمةُ اللَّهِ وَبَرَكاتُه' c /salam
-
-'َلَّه' > 'اللَّه' c 
-'ألَّه' > 'اللَّه' c 
-'الَّه' > 'اللَّه' c 
-'اللَه' > 'اللَّه' c 
+store(FontTashkeelOpt) '0'
+c if(FontTashkeelOpt = '0') > outs('الله')
+c if(FontTashkeelOpt = '1') > outs('اللَّه')
+U+200E if(FontTashkeelOpt = '0') > set(FontTashkeelOpt = '1') save(FontTashkeelOpt)
+U+200E if(FontTashkeelOpt = '1') > set(FontTashkeelOpt = '0') save(FontTashkeelOpt)
+c store(LJKeys) 'َلَّه' 'الَّه' 'اللَه'
+c any(LJKeys) if(FontTashkeelOpt = '0') > 'الله'
+c any(LJKeys) if(FontTashkeelOpt = '1') > 'اللَّه'
+'َلَّه' > 'الله'
+'الَّه' > 'الله'
+'اللَه' > 'الله'
 
 'بِسمِلَّه' > 'بِسمِ اللَّه' c bismillah
 any(Hotkey) 'بِسمِلَّه' > 'بِسمِ اللَّهِ الرَّحمـٰنِ الرَّحيم' c /bismillah
@@ -222,10 +218,10 @@ any(Hotkey) 'عزوج'> 'عَزَّ وَجَلّ' c 3zwj
 any(Hotkey) 'جج' > 'جَلَّ جَلالُه' c /jj
 any(Hotkey) any(Hotkey) 'جج' > 'ﷻ' c //jj
 
-any(Hotkey) 'صَو' > 'صَلَّى اللَّٰهُ عَلَيهِ وَسَلَّم' c /Saw
-any(Hotkey) 'سَو' > 'صَلَّى اللَّٰهُ عَلَيهِ وَسَلَّم' c /saw
-any(Hotkey) any(Hotkey) 'صَو' > 'ﷺ' c //Saw
-any(Hotkey) any(Hotkey) 'سَو' > 'ﷺ' c //saw
+any(Hotkey) 'صَ' 'ُ' > 'صَلَّى اللَّٰهُ عَلَيهِ وَسَلَّم' c /Saw
+any(Hotkey) 'سَ' 'ُ' > 'صَلَّى اللَّٰهُ عَلَيهِ وَسَلَّم' c /saw
+any(Hotkey) any(Hotkey) 'صَ' 'ُ' > 'ﷺ' c //Saw
+any(Hotkey) any(Hotkey) 'سَ' 'ُ' > 'ﷺ' c //saw
 
 any(Hotkey) 'رَ' > 'رَضِيَ اللَّٰهُ عَنه' c /ra
 
@@ -239,33 +235,30 @@ store(harf) 'ب' 'ف' 'و' 'ك' 'أ' nul ''
 
 'َ' 'َ'  > 'ا'
 'ا' 'َ' > 'أ'
-'أَ' 'َ' > 'ى'
+'أَ' 'َ' > 'ى' 
 'أَ' any(cons) > 'أ' context(3)
 'أَ' any(vowel) > 'أ' context(3)
 'ى' 'َ' > 'ٰ'
 'ٰ' 'َ' > 'آ'
 
 'َى' > 'ى'
-'َت' 'ْ' > 'ة'
-'َه' 'ْ' > 'ة' 
+'َة' ' ' > 'ة ' 
 'َة' any(diacritic) ' ' > 'ة' context(3) ' '
-'َة' any(tanween) > 'ة' context(3)
-'َت' any(diacritic) 'ْ' > 'ة' context(3)
-'َت' 'َنّ' 'ْ' > 'تًا' c tanne
-'َت' 'َ' 'نْ' > 'ةً' c exceptions: مُؤَقّتًا
-'َت' 'ُ' 'نْ' > 'ةٌ' 
-'َت' 'ِ' 'نْ' > 'ةٍ' 
+'َة' any(tanween) ' ' > 'ة' context(3) ' '
 
 'ُ' 'ُ'  > 'و'
-'وُ' 'ُ' > 'ُؤ'
-'ءُ' 'ْ' > 'ؤُ'
-'ءْ' 'ُ' > 'ؤُ'
+'و' 'ُ'  > 'وّ'
+any(cons) 'وُ'  > context(1) 'ُوّ' c always ?
+any(cons) 'ّ' 'وُ'  > context(1) context(2) 'ُوّ' c like الثُّوّار c always ?
+'ءُ' 'ُ' > 'ؤُ'
 any(cons) 'أُ' 'ُ' > context(1) 'ؤُ'
 'الأُ' 'ُ' > 'الأو'
 
 'ِ' 'ِ'  > 'ي'
 c 'يِ' 'ِ' > 'إ
-'ا' 'ِ' > 'إ'
+'ي' 'ِ'  > 'يّ'
+any(cons) 'يِ'  > context(1) 'ِيّ' c always ?
+any(cons) 'ّ' 'يِ'  > context(1) context(2) 'ِيّ' c always ?
 
 nul 'ْ' 'ْ' > 'ا'
 ' ْ' 'ْ' > ' ا'
@@ -276,33 +269,10 @@ nul 'ْ' 'ْ' > 'ا'
 'ألّ' 'ْ' > 'الـ'
 
 'ء' 'ء' > 'ئ'
-'ئ' 'ء' > 'أ'
-'أ' 'ء' > 'ء'
-
+'أ' 'ء' > 'ئ'
 'ُ' 'ء' > 'ُؤ'
 'َ' 'ء' > 'َأ'
 'ِ' 'ء' > 'ِئ'
-
-any(FathaVariant) any(cons) 'ء' > context(1) context(2) 'أ'
-'أُ' any(cons) 'ء' > 'أُ' context(3) 'أ'
-'إ' any(cons) 'ء' > 'إ' context(2) 'أ'
-
-any(cons) 'اءِ' any(cons) > context(1) 'ائِ' context(5)
-any(cons) 'ّ' 'اءِ' any(cons) > context(1) 'ّائِ' context(6)
-any(vowel) 'اءِ' any(cons) > context(1) 'ائِ' context(5)
-
-'َأ' 'ي' > 'َئي'
-'َإِ' 'ِ' > 'َئي'
-
-c any(cons) 'َأُ' 'ُ' > context(1) 'َؤو'
-c any(harf) 'َأُ' 'ُ' > context(1) 'َأو'
-c any(cons) any(diacritic) 'ئُ' 'ُ' > context(1) context(2) 'ءو'
-c any(cons) 'ئُ' 'ُ' > context(1) 'ءو'
-c 'ئْ' 'ُ' > 'ءو'
-
-c 'ءُ' 'ءو'
-c 'ئُ' 'ئو'
-c 'أُ' 'ُ' > 'أو'
 
 'ئْ' 'َ' > 'أ'
 'ئَ' 'ْ' > 'أ'
@@ -313,6 +283,22 @@ c 'أُ' 'ُ' > 'أو'
 'ئْ' 'ِ' > 'إ'
 'ئِ' 'ْ' > 'إ'
 
+'َ' 'ِ'  > 'َي'
+'َ' 'ُ'  > 'َو'
+
+'ا' 'ِ'  > 'اي'
+'ا' 'ُ'  > 'او'
+
+c 'ِ' 'َ'  > 'ِا'
+'ِ' 'ُ'  > 'ِو'
+
+'ُ' 'ِ'  > 'ُي'
+
+any(cons) 'وْ' 'ْ' > context(1) 'ُوّ'
+any(cons) 'يْ' 'ْ' > context(1) 'ِيّ'
+
+any(cons) 'َأُ' 'ُ' > context(1) 'َؤو'
+any(harf) 'َأُ' 'ُ' > context(1) 'َأو'
 
 c "'" "'" > '"'
 
@@ -353,11 +339,6 @@ c ' ' any(cons) index(cons, 1)  > ' ال' context(2) 'ّ' c doesnt work
 'لِلءِ' > 'لِلإ' c 'lil2i' = 'لِلإ'
 'لَلءِ' > 'لَلإ' c 'lal2i' 
 
-'لِئَ' any(cons) > 'لِأ' context(5) c li2a
-'لِئُ' any(cons) > 'لِأُ' context(5) c li2o
-'لِئُ' any(vowel) > 'لِأُ' context(5) c li2o
-'لِئِ' any(cons) > 'لِإ' context(5) c li2i
-
 'بِلّل' > 'بِاللّ' c 'billl' = 'بِاللّ' like in بِاللُّغَةِ
 'الّل' > 'اللّ'
 
@@ -373,15 +354,18 @@ nul any(harf) 'ِ' 'ّ' any(cons) > context(2) context(3) 'ا' context(5)
 
 c cc handle diacritics at the beginning/after a space
 nul 'َ' > 'أ'
-nul 'ُ' > 'أُ'
-nul 'ِ' > 'إ'
+nul 'ُ' > 'و'
+nul 'ِ' > 'ي'
 
 ' ' 'َ' > ' أ'
-' ' 'ُ' > ' أُ'
-' ' 'ِ' > ' إ'
+' ' 'ُ' > ' و'
+' ' 'ِ' > ' ي'
 
 'وَ' 'ُ' > 'وَ' 'أُ'
 'وَ' 'ِ' > 'وَ' 'إ'
+
+'إ' 'ِ' > 'إي'
+'أَ' 'ِ' > 'أي'
 
 'أ' 'ِ' > 'إ'
 'إ' 'َ' > 'أ'
@@ -389,13 +373,13 @@ nul 'ِ' > 'إ'
 'أُ' 'ِ' > 'إ'
 'إ' 'ُ' > 'أُ'
 
-'ءْ' 'َ' > 'أ'
+'ءَ' 'َ' > 'أ'
 'ءَ' 'ْ' > 'آ'
-c 'ءَ' any(thing) > 'أ' context(3)
+'ءَ' any(thing) > 'أ' context(3)
 'أ' 'ْ' > 'آ'
 
-'ءِ' 'ْ'  > 'إ' 
-c 'ءِ' any(thing) > 'إ' context(3)
+'ءِ' 'ِ'  > 'إ'
+'ءِ' any(thing) > 'إ' context(3)
 
 c nul any(diacritic) > nul index(alif, 1)
 c ' ' any(diacritic) > ' ' index(alif, 1)
@@ -403,18 +387,23 @@ c ' ' any(diacritic) > ' ' index(alif, 1)
 c cc 'al' + cons/vowel = ال + that cons/vowel
 nul 'أل' 'ل' > 'ألّ'
 ' أل' 'ل' > ' ألّ'
-'ألّ' 'ل' > 'اللّ'
-
-nul 'أل' any(cons) > 'ال' context(4) 
+nul 'أل' any(cons) > 'ال' context(4)
 ' ' 'أل' any(cons) > ' ال' context(4)
 nul 'أل' any(vowel) > 'ال' context(4)
 ' ' 'أل' any(vowel) > ' ال' context(4)
 
-' ' 'ل' any(consOrVowel) any(diacritic) > ' ال' context(3) context(4)
-nul 'ل' any(consOrVowel) any(diacritic) > 'ال' context(3) context(4) c ex: lwalad = الوَلَد
+nul 'أل' 'ُ' any(diacritic) > 'الو' context(5) c Context should be 4 after april update
+' ' 'أل' 'ُ' any(diacritic) > ' الو' context(5)
+nul 'أل' 'ِ' any(diacritic) > 'الي' context(5) c Context should be 4 after april update
+' ' 'أل' 'ِ' any(diacritic) > ' الي' context(5)
 
-' ' 'ل' any(cons) any(vowel) > ' ال' context(3) context(4)
-nul 'ل' any(cons) any(vowel) > 'ال' context(3) context(4) c ex: l3yd = العيد
+' ' 'ل' any(cons) any(diacritic) > ' ال' context(3) context(4)
+' ' 'ل' any(vowel) any(diacritic) > ' ال' context(3) context(4)
+
+nul 'لُ' any(diacritic) > 'الو' context(4)
+' ' 'لُ' any(diacritic) > ' الو' context(4)
+nul 'لِ' any(diacritic) > 'الي' context(4)
+' ' 'لِ' any(diacritic) > ' الي' context(4)
 
 c ' ' 'ا' any(cons) > ' أ' context(3)
 c ' ' 'ا' any(vowel) > ' أ' context(3)
@@ -425,7 +414,7 @@ any(cons) any(diacritic) 'وْ' > context(1) context(2) 'وا'
 'ء' 'وْ' > context(1) 'وا'
 'ؤ' 'وْ' > context(1) 'وا'
 
-c cc Tanween
+c cc التَّنوين
 'َنْ' > 'ً'
 'ُنْ' > 'ٌ'
 'ِنْ' > 'ٍ'
@@ -434,16 +423,16 @@ c cc Tanween
 'ُْن' > 'ٌ'
 'ِْن' > 'ٍ'
 
-c cc cc ء/ءا Tanween
+c cc cc تَنوينُ الهَمزة ء/ءا 
 ' ' 'أن' 'ْ' > ' ً'
 nul 'أن' 'ْ' > 'ً'
 ' ' 'إن' 'ْ' > ' ٍ'
 nul 'إن' 'ْ' > 'ٍ'
 
-'يءَن' 'ْ' > 'يئًا'
-'اءَن' 'ْ' > 'اءً'
-any(thing) 'ءَن' 'ْ' > context(1) 'ءًا'
-any(thing) 'ءِن' 'ْ' > context(1) 'ءٍ'
+'يأن' 'ْ' > 'يئًا'
+'اأن' 'ْ' > 'اءً'
+any(thing) 'أن' 'ْ' > context(1) 'ءًا'
+any(thing) 'إن' 'ْ' > context(1) 'ءٍ'
 
 c cc التّاءُ المَربوطةُ وَتَنوينُها
 'ت' 'َنّ' 'ْ' > 'ةً' c tanne
@@ -452,12 +441,11 @@ c cc التّاءُ المَربوطةُ وَتَنوينُها
 
 'ت' 'َنْ' > 'تًا' c tane
 'تًا' 'ْ' > 'ةً' c an additional e adjusts it
-'ةً' 'ْ' > 'تًا' c cycle with 'e'
 
 'ت' any(diacritic) 'ْ' > 'ة' context(2) 
 'ت' any(tanween) 'ْ' > 'ة' context(2)
 
-'ت' 'ْ' > 'ة' 
+'ت' 'ْ' > 'ة'
 'ه' 'ْ' > 'ة' 
 
 c cc handle alif after a fatha tanween
@@ -475,6 +463,10 @@ any(cons) 'ّ' 'َْن' > index(cons, 1) 'ّ' 'ًا'
 
 c cc handle different huruf (مُختَلَف الحُروف)
 c cc cc fix لا when it's not completed
+
+c store(Start) nul ' '
+c nul 'لَ' ' ' > context(2) 'لا '
+
 nul 'لَ' any(WordEnding) > 'لا' context(4)
 ' لَ' any(WordEnding) > ' لا' context(4)
 nul any(harf) 'لَ' any(WordEnding) > context(2) 'لا' context(5)
@@ -490,58 +482,49 @@ nul 'فِ ' > 'في '
 ' فِ ' > ' في '
 nul 'فِّ ' > 'فَفي '
 ' فِّ ' > ' فَفي '
-nul any(harf) 'فِ ' > context(2) 'في '
-' ' any(harf) 'فِ ' > ' ' context(2) 'في '
-nul any(harf) any(diacritic) 'فِ ' > context(2) context(3) 'في '
-' ' any(harf) any(diacritic) 'فِ ' > ' ' context(2) context(3) 'في '
+any(harf) 'فِ ' > context(1) 'في '
+any(harf) any(diacritic) 'فِ ' > context(1) context(2) 'في '
 
 c cc fix ما
 nul 'مَ ' > 'ما '
 ' مَ ' > ' ما '
-nul any(harf) 'مَ ' > context(2) 'ما '
-' ' any(harf) 'مَ ' > ' ' context(2) 'ما '
-nul any(harf) any(diacritic) 'مَ ' > context(2) context(3) 'ما '
-' ' any(harf) any(diacritic) 'مَ ' > ' ' context(2) context(3) 'ما '
+any(harf) 'مَ ' > context(1) 'ما '
+any(harf) any(diacritic) 'مَ ' > context(1) context(2) 'ما '
 
 c cc fix يا
 nul 'يَ ' > 'يا '
 ' يَ ' > ' يا '
-nul any(harf) 'يَ ' > context(2) 'يا '
-' ' any(harf) 'يَ ' > ' ' context(2) 'يا '
-nul any(harf) any(diacritic) 'يَ ' > context(2) context(3) 'يا '
-' ' any(harf) any(diacritic) 'يَ ' > ' ' context(2) context(3) 'يا '
+any(harf) 'يَ ' > context(1) 'يا '
+any(harf) any(diacritic) 'يَ ' > context(1) context(2) 'يا '
 
-c cc Relative pronouns (الأسماءُ المَوصولَه) (ي here is either y or i)
-'ألَّذي' > 'الَّذي' c alladhhي
-'ألَّذِ' 'ِ' > 'الَّذي' c alladhhي
-'اللَّذي' > 'الَّذي' c eladhhي
-'اللَّذِ' 'ِ' > 'الَّذي' c eladhhي
-
-'ألَّتي' > 'الَّتي' c allatي
-'ألَّتِ' 'ِ' > 'الَّتي' c allatي
-'اللَّتي' > 'الَّتي' c elatي
+c cc Relative pronouns (الأسماءُ المَوصولَه) (ي here is either y or ii)
+c 'اللَتي' > 'الَّتي' c allatي 
+'اللَتِ' 'ِ' > 'الَّتي' c allatي
 'اللَّتِ' 'ِ' > 'الَّتي' c elatي
 
-'ألَّذان' > 'اللَّذان' c alladhhaan
-'ألَّذَين' > 'اللَّذَين' c alladhhayn
-'ألَّتان' > 'اللَّتان' c allataan
-'ألَّتَين' > 'اللَّتَين' c allatayn
+c 'اللَذي' > 'الَّذي' c alladhhي
+'اللَذِ' 'ِ' > 'الَّذي' c alladhhي
+'اللَّذِ' 'ِ' > 'الَّذي' c eladhhي
 
-'ألّاتي' > 'اللّاتي' c allaatي
-'ألّاتِ' 'ِ' > 'اللّاتي' c allaatي
-'ألّاءي' > 'اللّائي' c allaa2ي
-'ألّاءِ' 'ِ' > 'اللّائي' c allaa2ي
-'اللّاءي' > 'اللّائي' c elaa2ي
-'اللّاءِ' 'ِ' > 'اللّائي' c elaa2ي
+'اللَذان' > 'اللَّذان' c alladhhaan
+'اللَذَين' > 'اللَّذَين' c alladhhayn
+'اللَتان' > 'اللَّتان' c allataan
+'اللَتَين' > 'اللَّتَين' c allatayn
+
+c 'اللاتي' > 'اللّاتي' c allaatي
+'اللاتِ' 'ِ' > 'اللّاتي' c allaatي
+c 'اللاءي' > 'اللّائي' c allaa2ي
+'اللاءِ' 'ِ' > 'اللّائي' c allaa2ي
 
 c cc some demonstrative Pronouns (أسماءُ الإشارَه)
-'هاؤُلاء' > 'هـٰؤُلاء' c haa2oolaa2
-'هاءُلاء' > 'هـٰؤُلاء' c haa2olaa2
+'هاؤُلاء' > 'هـٰؤُلاء' c haa2oolaa2 
 'أُلاءِك' > 'أولـٰئِك' c olaa2ik
+
+'هوَ' > 'هُوَ'
 
 c 'اءُ' 'ُ' > 'َـٰؤُ'
 
-c cc Punctuation & symbols
+c cc Punctuation
 ';' > '؛'
 '?' > '؟' 
 ',' > '،'
@@ -552,51 +535,28 @@ store(Punc_rot2) '!' '؛' ':' '؟' c '،' '.'
 any(Punc_rot2) '/' > index(Punc_rot1, 1)
 any(Punc_rot2) '؛' > index(Punc_rot1, 1)
 
-any(thing) '  ' > context(1) '، '
-'ّ' '  ' > 'ّ، ' c keeps shadda from next rule
-any(diacritic) '  ' > '، ' c removes the diacritics
-
-'، ' ' ' > '.'
-any(tanween) '، ' ' ' > '.' c removes the tanween
-c 'ًا' '  ' > 'ا. ' c but جِدّا shouldnt be fixed, eventually removed this rule, the output didn't look good to me :)
-
-store(space) nul ' '
-'.' any(space) 'َ' > '، أ'
-'.' any(space) 'ُ' > '، أُ'
-'.' any(space) 'ِ' > '، إ'
-'.' any(space) 'ْ' > '، ْ'
-'.' any(space) any(thing) > '، ' context(3)
-
-c cc Symbols
-store(LatinSymbolsOpt) '0'
-store(ArabicSymbols) '،' '؟' '؛'
-store(LatinSymbols) ',' '?' ';'
-
-'//لَتِن ' > nul
-'//لَتِن ' if(LatinSymbolsOpt = '0') > set(LatinSymbolsOpt = '1') save(LatinSymbolsOpt)
-'//لَتِن ' if(LatinSymbolsOpt = '1') > set(LatinSymbolsOpt = '0') save(LatinSymbolsOpt)
-
-any(ArabicSymbols) if(LatinSymbolsOpt='1') > index(LatinSymbols, 1)
+any(tanween) '  ' > '. ' c always ?
+'ًا' '  ' > 'ا. ' c but جِدّا shouldnt be fixed
+any(diacritic) '  ' > '. '
+any(thing) '  ' > context(1) '. '
+'. ' 'َ' > '، أ'
+'. ' 'ُ' > '، و'
+'. ' 'ِ' > '، ي'
+'. ' 'ْ' > '، ْ'
+'. ' any(thing) > '، ' context(3)
 
 c switch to a variant of a consonant
 store(1stChar) 'د' 'ت' 'س' 'ض' 'ك'
 store(2ndChar) 'ذ' 'ث' 'ش' 'ظ' 'خ'
 any(1stChar) 'هه' > index(2ndChar, 1)
-c any(1stChar) any(diacritic) 'هه' > index(2ndChar, 1) context(2) this results in many problems, ex: 'sahh' in Yosahhil is becoming ش
-any(2ndChar) index(1stChar, 1) 'هه' > index(2ndChar, 1) 'ّ' c add shadda to 2ndChar using 1stChar combination
+any(1stChar) any(diacritic) 'هه' > index(2ndChar, 1) context(2)
+any(2ndChar) index(1stChar, 1) 'هه' > index(2ndChar, 1) 'ّ'
 'تّ' 'ت' > 'ط'
 'سّ' 'س' > 'ص'
 'كّ' 'ك' > 'خ'
 'هّه' > 'ح'
 'دّ' 'د' > 'ض'
 'ضّ' 'ض' > 'ظ'
-c 'ضّ' 'ض' > 'پ'
-
-'بّ' 'ب' > 'پ'
-'ىّ' 'ى' > 'ڤ'
-'فّ' 'ف' > 'ڤ'
-'غّ' 'غ' > 'ڠ'
-'جّ' 'ج' > 'ڠ'
 
 store(a_rot1) 'َ' 'ا' 'آ' 'أ'  'ٰ' 'ى' 'ع'
 store(a_rot2) 'ا' 'آ' 'أ' 'ٰ' 'ى' 'ع' 'َ'
@@ -624,8 +584,8 @@ c any(o_rot1) 'ُ' > index(o_rot2, 1)
 c any(i_rot1) 'ِ' > index(i_rot2, 1)
 
 c Override diacritics when they are different and are not used in any other rule
-store(tashkeel) 'َ' 'ُ' 'ِ'
-any(tashkeel) any(tashkeel) > context(2)
+c store(tashkeel) 'َ' 'ُ' 'ِ'
+c any(tashkeel) any(tashkeel) > context(2)
 
 c '::' > set(&mnemoniclayout='0') save(&mnemoniclayout) c I can't do this https://help.keyman.com/developer/language/reference/set#:~:text=system%20stores%20are-,supported,-%3A
 c + [K_p] [K_U] > 'صَلَّى ٱللَّٰهُ عَلَيْهِۦ وَسَلَّمَ'

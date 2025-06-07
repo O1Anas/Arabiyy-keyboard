@@ -1,10 +1,10 @@
-﻿store(&Version) '10.0'
+﻿store(&Version) '17.0'
 store(&TARGETS) 'any'
 store(&mnemoniclayout) '1'
 
 store(&COPYRIGHT) 'Copyright 2024 © Anas - أنَس عِمران'
 
-store(&KEYBOARDVERSION) '1.00'
+store(&KEYBOARDVERSION) '1.1'
 store(&BITMAP) 'Arabiyy.ico'
 
 c store(&ETHNOLOGUECODE) 'arb ara aao arq bbz abv shu acy adf avl arz afb ayh acw ayl acm ary ars apc ayp acx aec ayn ssh ajp pga apd acq abh aeb auz'
@@ -15,13 +15,12 @@ store(&NAME) 'Arabiyy - عَرَبِيّ'
 
 begin Unicode > use(main)
 
-store(cons) \
-  'ذ' 'ظ' 'خ' 'ح' 'ض' 'ص' 'ى' 'ط' 'م' 'ن' 'ب' 'ث' 'ش' 'ز' 'ل' 'ك' 'ج' 'ه' 'غ' 'ف' \
-  'د' 'س' 'ع' 'ت' 'ر' 'ق'
+store(cons) 'ذ' 'ظ' 'خ' 'ح' 'ض' 'ص' 'ى' 'ط' 'م' 'ن' 'ب' 'ث' 'ش' 'ز' 'ل' 'ك' 'ج' 'ه' 'غ' 'ف' 'د' 'س' 'ع' 'ت' 'ر' 'ق'
 store(vowel) 'اوي'
 store(tanween) ' ً ٍ ٌ '
 store(diacritic) 'ُ' 'َ' 'ِ' 'ّ'
 store(FathaVariant) 'َ' 'أ' 'ا' ' '
+store(thing) 'ة' 'ُ' 'َ' 'ِ' 'ّ' 'ً' 'ٌ' 'ٍ' 'أ' 'ءاوي' 'ذ' 'ظ' 'خ' 'ح' 'ض' 'ص' 'ى' 'ط' 'م' 'ن' 'ب' 'ث' 'ش' 'ز' 'ل' 'ك' 'ج' 'ه' 'غ' 'ف' 'د' 'س' 'ع' 'ت' 'ر' 'ق'
 c store(alif) 'أُ' 'أ' 'إ'
 c store(consCode) 'U+0638' 'U+062E' 'U+062D' 'U+0636' 'U+0635' 'U+0649' 'U+0637' 'U+0645' 'U+0646' 'U+0628' 'U+062B' 'U+0634' 'U+0621' 'U+0632' 'U+0644' 'U+0643' 'U+062C' 'U+0647' 'U+063A' 'U+0641' 'U+062F' 'U+0633' 'U+0639' 'U+064A' 'U+062A' 'U+0631' 'U+0648' 'U+0642'
 c store(vowelCode) 'U+0627' 'U+0648' 'U+064A'
@@ -64,7 +63,7 @@ group(main) using keys
 + '9' > 'ق'
 
 + 'a' > 'َ'
-+ 'A' > 'ا'
++ 'A' > 'َ '
 
 + 'b' > 'ب'
 + 'B' > dk(none)
@@ -88,7 +87,7 @@ group(main) using keys
 + 'H' > dk(none)
 
 + 'i' > 'ِ'
-+ 'I' > dk(none)
++ 'I' > 'ِ '
 
 + 'j' > 'ج'
 + 'J' > dk(none)
@@ -106,7 +105,7 @@ group(main) using keys
 + 'N' > dk(none)
 
 + 'o' > 'ُ'
-+ 'O' > dk(none)
++ 'O' > 'ُ '
 
 + 'p' > '؛'
 + 'P' > '؛'
@@ -123,7 +122,7 @@ group(main) using keys
 + 't' > 'ت'
 + 'T' > 'ط'
 
-+ 'u' > dk(none)
++ 'u' > 'ُ'
 + 'U' > '\'
 
 + 'v' > 'ى'
@@ -175,13 +174,23 @@ c cc 3rd line's remaining bindings
 match > use(post)
 group(post)
 
-c Remove the c's at the beginning of the next 3 lines if you prefer Arabic-Indic numbers
-c store(digitkey) '0123456789'
-c store(digit) '٠١٢٣٤٥٦٧٨٩'
-c any(digitkey) > index(digit, 1)
+c Numbers
+store(digitkey) '0123456789'
+store(digit) '٠١٢٣٤٥٦٧٨٩'
+store(NumOpt) '0'
+
+'//رقم' > nul
+'//رقم' if(NumOpt = '0') > set(NumOpt = '1') save(NumOpt)
+'//رقم' if(NumOpt = '1') > set(NumOpt = '0') save(NumOpt)
+
+any(digitkey) if(NumOpt = '1') > index(digit, 1)
 
 c Shadda
 any(cons) index(cons, 1) > context(1) 'ّ'
+
+'َ ' 'نْ' > 'ً'
+'ُ ' 'نْ' > 'ٌ'
+'ِ ' 'نْ' > 'ٍ'
 
 'و' 'و' > 'وّ'
 'ي' 'ي' > 'يّ'
@@ -192,25 +201,25 @@ any(cons) index(cons, 1) > context(1) 'ّ'
 'خكّ' 'ك' > 'خّ'
 
 c Islamic keyword shortcuts 💖
-store(HotkeyTrigger) '/' '\'
+store(Hotkey) '/' '\'
 'َلَّه' > 'اللَّه' c 
 'ألَّه' > 'اللَّه' c 
 'الَّه' > 'اللَّه' c 
 'اللَه' > 'اللَّه' c 
 
 'بِسمِلَّه' > 'بِسمِ اللَّه' c bismillah
-any(HotkeyTrigger) 'بِسمِلَّه' > 'بِسْمِ اللَّهِ الرَّحْمَـٰنِ الرَّحِيم' c /bismillah
-any(HotkeyTrigger) 'سوت' > 'سُبحَانَهُ وَتَعَالَىٰ' c swt
-any(HotkeyTrigger) 'توت' > 'تَبَارَكَ وَتَعَالَىٰ' c twt
-any(HotkeyTrigger) 'أزوج'> 'عَزَّ وَجَلّ' c azwj
-any(HotkeyTrigger) 'َزوج'> 'عَزَّ وَجَلّ' c azwj
-any(HotkeyTrigger) 'عزوج'> 'عَزَّ وَجَلّ' c 3zwj
-any(HotkeyTrigger) 'جج' > 'جَلَّ جَلَالُه' c jj
+any(Hotkey) 'بِسمِلَّه' > 'بِسْمِ اللَّهِ الرَّحْمَـٰنِ الرَّحِيم' c /bismillah
+any(Hotkey) 'سوت' > 'سُبحَانَهُ وَتَعَالَىٰ' c swt
+any(Hotkey) 'توت' > 'تَبَارَكَ وَتَعَالَىٰ' c twt
+any(Hotkey) 'أزوج'> 'عَزَّ وَجَلّ' c azwj
+any(Hotkey) 'َزوج'> 'عَزَّ وَجَلّ' c azwj
+any(Hotkey) 'عزوج'> 'عَزَّ وَجَلّ' c 3zwj
+any(Hotkey) 'جج' > 'جَلَّ جَلَالُه' c jj
 c 'ب' 'ه' > 'صَلَّى ٱللَّٰهُ عَلَيْهِۦ وَسَلَّمَ'
-any(HotkeyTrigger) 'صَو' > 'صَلَّى ٱللَّٰهُ عَلَيهِۦ وَسَلَّمَ' c Saw
-any(HotkeyTrigger) 'سَو' > 'صَلَّى ٱللَّٰهُ عَلَيهِۦ وَسَلَّمَ' c saw
+any(Hotkey) 'صَو' > 'صَلَّى ٱللَّٰهُ عَلَيهِۦ وَسَلَّمَ' c Saw
+any(Hotkey) 'سَو' > 'صَلَّى ٱللَّٰهُ عَلَيهِۦ وَسَلَّمَ' c saw
 
-any(HotkeyTrigger) 'رَ' > 'رَضِيَ ٱللَّٰهُ عَنهُ' c ra
+any(Hotkey) 'رَ' > 'رَضِيَ ٱللَّٰهُ عَنهُ' c ra
 
 store(QuranSymbols1) 'ۚ' 'ۖ' 'ۗ' 'ۙ' 'ۛ' '۞' '۝' '۩' 'ۡ' 'ۢ' 'ۣ' 'ۤ' 'ۥ' 'ۦ' 'ۧ' 'ۨ' 'ۘ' 'ۖ' 'ۜ'
 store(QuranSymbols2) 'ۖ' 'ۗ' 'ۙ' 'ۛ' '۞' '۝' '۩' 'ۡ' 'ۢ' 'ۣ' 'ۤ' 'ۥ' 'ۦ' 'ۧ' 'ۨ' 'ۘ' 'ۖ' 'ۜ' 'ۚ'
@@ -225,7 +234,11 @@ c Handle diacritics + vowels
 'أَ' any(vowel) > 'أ' context(3)
 'ى' 'َ' > 'ٰ'
 'ٰ' 'َ' > 'آ'
+
 'َى' > 'ى'
+'َة' ' ' > 'ة ' 
+'َة' any(diacritic) ' ' > 'ة' context(3) ' '
+'َة' any(tanween) ' ' > 'ة' context(3) ' '
 
 'ُ' 'ُ'  > 'و'
 'وُ' 'ُ' > 'ُؤ'
@@ -239,10 +252,11 @@ any(cons) 'أُ' 'ُ' > context(1) 'ؤُ'
 
 nul 'ْ' 'ْ' > 'ا'
 ' ْ' 'ْ' > ' ا'
-
 'ْ' 'ْ' > 'ّ'
 'ّ' 'ْ' > 'ٓ'
 'ٓ' 'ْ' > 'ـ'
+'ـ' 'ْ' > 'ــ'
+'ألّ' 'ْ' > 'الـ'
 
 'ء' 'ء' > 'ئ'
 'أ' 'ء' > 'ئ'
@@ -283,6 +297,9 @@ nul 'ْ' any(cons) > 'ال' context(2) 'ّ'
 any(harf) 'ْ' any(cons) > context(1) 'ال' context(3) 'ّ'
 any(harf) 'َ' 'ْ' any(cons) > context(1) 'ال' context(4) 'ّ'
 any(harf) 'ِ' 'ْ' any(cons) > context(1) 'ِ' 'ال' context(4) 'ّ'
+
+' ' any(cons) 'ّ' any(diacritic) > ' ال' context(2) 'ّ' context(4)
+c ' ' any(cons) index(cons, 1)  > ' ال' context(2) 'ّ' c doesnt work
 
 'لءَ' > 'الأ' c 'l2a' = 'الأ'
 'لِلءَ' > 'لِلأ' c 'lil2a' = 'لِلأ'
@@ -334,6 +351,9 @@ nul 'أ' 'ل' any(vowel) > 'ال' context(3)
 ' ' 'أ' 'ل' any(cons) > ' ال' context(4)
 ' ' 'أ' 'ل' any(vowel) > ' ال' context(4)
 
+' ' 'ل' any(cons) any(diacritic) > ' ال' context(3) context(4)
+' ' 'ل' any(vowel) any(diacritic) > ' ال' context(3) context(4)
+
 c ' ' 'ا' any(cons) > ' أ' context(3)
 c ' ' 'ا' any(vowel) > ' أ' context(3)
 store(WordEnding) ' ' '،' '؛' ':' '!' '.' '؟'
@@ -349,11 +369,13 @@ c cc Handle tanween
 'ُنْ' > 'ٌ'
 'ِنْ' > 'ٍ'
 
+'َْن' > 'ً'
+'ُْن' > 'ٌ'
+'ِْن' > 'ٍ'
+
 any(cons) 'اً' > context(1) 'ًا'
 'ياً' > context(1) 'ًا'
 'واً' > context(1) 'ًا'
-
-'ى' 'َنْ' > 'ىً'
 
 c cc handle ta' marboota
 'ت' 'َنّ' 'ْ' > 'ةً' c tanne
@@ -361,6 +383,7 @@ c cc handle ta' marboota
 'ت' 'ِنّ' 'ْ' > 'ةٍ' c tinne
 
 'ت' 'َنْ' > 'تًا' c tane
+'تًا' 'ْ' > 'ةً' c an additional e adjusts it
 
 'ت' any(diacritic) 'ْ' > 'ة' context(2) 
 'ت' any(tanween) 'ْ' > 'ة' context(2)
@@ -371,6 +394,8 @@ c cc handle ta' marboota
 c cc handle alif after a fatha tanween
 any(cons) 'َنْ' > index(cons, 1) 'ًا'
 any(cons) 'ّ' 'َنْ' > index(cons, 1) 'ّ' 'ًا'
+any(cons) 'َْن' > index(cons, 1) 'ًا'
+any(cons) 'ّ' 'َْن' > index(cons, 1) 'ّ' 'ًا'
 'تًْ' > 'تًا'
 'ئ' 'َنْ' > 'ئ' 'ًا'
 'و' 'َنْ' > 'و' 'ًا'
@@ -431,6 +456,23 @@ c cc Punctuation
 '?' > '؟' 
 ',' > '،'
 
+store(Punc_rot1) '؛' ':' '؟' '!' c '،' '.'
+store(Punc_rot2) '!' '؛' ':' '؟' c '،' '.'
+
+any(Punc_rot2) '/' > index(Punc_rot1, 1)
+any(Punc_rot2) '؛' > index(Punc_rot1, 1)
+
+any(tanween) '  ' > '. ' c always ?
+c 'ًا' '  ' > 'ا. ' c but جِدّا shouldnt be fixed, eventually removed this rule, the output didn't look good to me :)
+'ّ' '  ' > 'ّ. '
+any(diacritic) '  ' > '. '
+any(thing) '  ' > context(1) '. '
+'. ' 'َ' > '، أ'
+'. ' 'ُ' > '، أُ'
+'. ' 'ِ' > '، إ'
+'. ' 'ْ' > '، ْ'
+'. ' any(thing) > '، ' context(3)
+
 c switch to a variant of a consonant
 store(1stChar) 'د' 'ت' 'س' 'ض' 'ك'
 store(2ndChar) 'ذ' 'ث' 'ش' 'ظ' 'خ'
@@ -471,8 +513,6 @@ c any(i_rot1) 'ِ' > index(i_rot2, 1)
 
 c Override diacritics when they are different and are not used in any other rule
 store(tashkeel) 'َ' 'ُ' 'ِ'
-any(tashkeel) any(tashkeel) > context(2)
-any(tashkeel) any(tashkeel) > context(2)
 any(tashkeel) any(tashkeel) > context(2)
 
 c '::' > set(&mnemoniclayout='0') save(&mnemoniclayout) c I can't do this https://help.keyman.com/developer/language/reference/set#:~:text=system%20stores%20are-,supported,-%3A

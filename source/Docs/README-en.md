@@ -1,6 +1,5 @@
 # <a id="introduction"></a>Arabiyy Keyboard
-![Banner](../Visuals/Banner.png)
-This tool allows our Muslim brothers and sisters to type any Arabic word with dynamic tashkeel, all of that from the comfort of the Latin keyboard already built into their device and most of the world's devices.
+This tool is a virtual keyboard that allows our Muslim brothers and sisters to type any Arabic word with dynamic tashkeel, all of that from the comfort of the Latin keyboard already built into their devices and most of the world's devices.
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -22,13 +21,12 @@ The `Arabiyy` keyboard was created to facilitate the typing of Arabic text with 
 - [x] Windows
 - [x] macOS
 - [x] Linux
-- [ ] Web
-- [ ] Android
-- [ ] iOS
+- [x] Web
+- [x] Android
+- [x] iOS
 
 ---
-- Support for other platforms like Web, Android, and iOS is planned for the future, in shaa'a Allah.
-- The tool was only tested on Windows, but there shouldn't be any problem with the other platforms.
+- The tool was only tested on Windows, Web & android, If you find a bug or an issue, please report it [here](https://github.com/O1Anas/Arabiyy-keyboard/issues/new).
 
 # <a id="download-install"></a>Download/Install
 To get the `Arabiyy` keyboard on your device, follow these steps:
@@ -52,7 +50,7 @@ To get the `Arabiyy` keyboard on your device, follow these steps:
 
 # <a id="usage"></a>Usage
 A detailed guide on how to use this tool is already written [here, in the docs file.](Docs-en.md)
-![Preview](../Visuals/preview-9om.gif)
+![Preview](../source/Visuals/preview-9om.gif)
 
 <div align="center"><h2><a href="Docs-en.md">------- Usage guide -------</a></h2></div>
 
@@ -91,6 +89,8 @@ See [LICENSE-en.md](LICENSE-en.md).
 - [Qutrub](https://github.com/linuxscout/qutrub), available for Android, Linux & Windows [here](https://qutrub.arabeyes.org/download/).
 
 # <a id="like-the-project"></a>Like the Project?
-If you liked this project, and would love to financially support its creator, then:
+**If you liked this project, and would love to financially support its creator, then:**
 
-<div align="center"><a href="https://ko-fi.com/T6T719GT13"><img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Support me" style="width: 100%;"></a></div>
+<div align="center"><a href="https://ko-fi.com/1anas"><img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Support me" style="width: 100%;"></a></div>
+
+![Banner](../source/Visuals/Banner.png)
