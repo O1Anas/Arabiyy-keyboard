@@ -24,8 +24,8 @@ def normalize_tashkeel(text):
     # Rule 5: Remove fatha before ta' marbuta
     normalized = re.sub(r'َ(?=ّ?ة[ًٌٍََُِّ]?)', '', normalized)
     
-    # Rule 6: Remove fatha before alif maqsura
-    normalized = re.sub(r'َ(?=ى[^ًٌٍََُِّ])', '', normalized)
+    # Rule 6: Remove fatha before alif maqsura OR before 'shadda + alif maqsura'
+    normalized = re.sub(r'َ(?=ّ?ى[^ًٌٍََُِّ]?)', '', normalized)
     
     # Rule 7: Remove kasra after alif with hamza below
     normalized = re.sub(r'إِ', 'إ', normalized)

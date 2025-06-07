@@ -7,6 +7,14 @@ on:
         description: 'Confirm release creation'
         required: true
         default: 'yes'
+      normalize_tashkeel:
+        description: 'Run tashkeel normalizer on all .md files before release'
+        required: false
+        default: 'yes'
+        type: choice
+        options:
+          - 'yes'
+          - 'no'
 
 jobs:
   publish-release:
@@ -121,15 +129,56 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Set up Python for Tashkeel Normalizer
+        if: github.event.inputs.normalize_tashkeel == 'yes'
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Normalize Tashkeel in Markdown Files
+        if: github.event.inputs.normalize_tashkeel == 'yes'
+        run: |
+          echo "Running tashkeel normalizer on all .md files (excluding LICENSE files)..."
+
+          # Find all .md files in the repository, excluding files with "LICENSE" in their name
+          find . -name "*.md" -type f | grep -v -i "LICENSE" | while read -r file; do
+            echo "Processing: $file"
+
+            # Create a temporary Python script to process the file in batch mode
+            python3 -c "
+          import sys
+          import os
+          sys.path.append('source/tools')
+          from tashkeel_normalizer import process_file, normalize_tashkeel
+
+          file_path = '$file'
+          try:
+              with open(file_path, 'r', encoding='utf-8') as f:
+                  content = f.read()
+
+              normalized_content = normalize_tashkeel(content)
+
+              with open(file_path, 'w', encoding='utf-8') as f:
+                  f.write(normalized_content)
+
+              print(f'Successfully normalized: {file_path}')
+          except Exception as e:
+              print(f'Error processing {file_path}: {str(e)}')
+              sys.exit(1)
+          "
+          done
+
+          echo "Tashkeel normalization completed for all .md files (LICENSE files excluded)."
+
       - name: Read Changelog for Current Version
         id: read_changelog
         run: |
           # Gets the full current version (e.g., '2.32.9') from the environment variable.
-          CURRENT_VERSION_FULL="${{ env.KMN_COMMON_VERSION }}" 
-          
+          CURRENT_VERSION_FULL="${{ env.KMN_COMMON_VERSION }}"
+
           # The exact heading to look for in CHANGELOG.md, e.g., "## 2.32.9".
           TARGET_CHANGELOG_HEADING_VERSION="${CURRENT_VERSION_FULL}"
-          
+
           echo "Looking for changelog section: ## ${TARGET_CHANGELOG_HEADING_VERSION}"
 
           CHANGELOG_CONTENT=$(awk -v version_heading="## ${TARGET_CHANGELOG_HEADING_VERSION}" '
@@ -142,7 +191,7 @@ jobs:
               }
               p
           ' source/Docs/CHANGELOG.md)
-          
+
           if [ -z "$CHANGELOG_CONTENT" ]; then
             echo "Warning: No specific changelog section found for version ${{ env.KMN_COMMON_VERSION }} (looking for heading '## ${TARGET_CHANGELOG_HEADING_VERSION}')."
             CHANGELOG_CONTENT="No specific changelog found for this version. Please check 'source/Docs/CHANGELOG.md'."
@@ -152,6 +201,22 @@ jobs:
 
           echo "CHANGELOG_CONTENT<<EOF" >> $GITHUB_ENV
           echo "$FULL_CHANGELOG_SECTION" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+
+      - name: Read Download Guide
+        id: read_download_guide
+        run: |
+          # Read the download guide content from the external file
+          if [ -f "source/Docs/download-guide.md" ]; then
+            DOWNLOAD_GUIDE_CONTENT=$(cat source/Docs/download-guide.md)
+            echo "Successfully read download guide from source/Docs/download-guide.md"
+          else
+            echo "Warning: Download guide file not found at source/Docs/download-guide.md"
+            DOWNLOAD_GUIDE_CONTENT="Download guide not available. Please check the repository."
+          fi
+
+          echo "DOWNLOAD_GUIDE_CONTENT<<EOF" >> $GITHUB_ENV
+          echo "$DOWNLOAD_GUIDE_CONTENT" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
 
       - name: Create Release
@@ -171,19 +236,7 @@ jobs:
 
             ---
 
-            <div align="center">
-              <h3>❗ <a href="https://keyman.com/downloads/">Make sure you you have downloaded Keyman here</a> - <a href="https://keyman.com/downloads/">هُنا Keyman تَأكَّد مِن أنَّكَ قَد حَمَّلتَ</a> ❗</h3>
-            </div>
-
-            <div align="center">
-              <h2>Installation Guide table - جَدوَلُ دليلِ التَّحميل</h2>
-            </div>
-
-            | English | العَرَبِيَّة |
-            | :-- | --: |
-            | `Arabiyy.kmx`<br>Default variation for keyboards with numbers on the 1st level <br>(without needing `shift`)<li>It should work well with `US/UK QWERTY`, `QWERTZ`, `DVORAK`, `COLEMAK` & `French-Belgian (exceptional AZERTY)`</li> | `Arabiyy.kmx`<br>النُّسخَةُ لِلَوحاتِ المَفاتيحِ بِالأرقامِ في المُستَوى الأوَّل<br>‏(`shift` بِدونِ الحاجَةِ إِلى)<li dir="rtl">‏تَعمَلُ جَيِّدًا مَعَ لَوحاتِ مَفاتِيحِ ‏`‏US/UK QWERTY`، ‏`‏QWERTZ`، ‏`‏DVORAK`، ‏`‏COLEMAK` وَ`‏French-Belgian (‏AZERTY إستِثنائِيَّة)`</li>‏ |
-            | `ArabiyyNumOnShift.kmx`<br>Variation for keyboards with numbers on the 2nd level <br>(needs `shift`)<li>It should work well with `AZERTY (French-Standard)`, `French DVORAK (BÉPO)` & `Arabic, Persian, Japanese & Canadian Keyboard Layouts`</li>  | `ArabiyyNumOnShift.kmx`<br>النُّسخَةُ لِلَوحاتِ المَفاتيحِ بِالأرقامِ في المُستَوى الثاني<br>(`shift` تَحتاجُ إِلى)<li dir="rtl">تَعمَلُ جَيِّدًا مَعَ ‏`‏AZERTY ‏(‏المُعتَمد فِرَنسِيًّا)`، ‏`‏French DVORAK (BÉPO)` وَلَوحاتِ المَفاتِيحِ العَرَبِيَّة، الفارِسِيَّة، اليابانِيَّةِ والكَنَدِيَّة</li>‏  |
-            | <hr><li>After choosing the correct file for your device and installing [Keyman](https://keyman.com/downloads/) earlier, simply open the file you selected to install the keyboard on your device.</li> | <hr><li dir="rtl">بَعدَ اختِيارِ المَلَفِّ الصَّحيحِ لِجِهازِكَ وَتَثبيتِ [Keyman](https://keyman.com/downloads/) سابِقًا، إفتَح المَلَفَّ الَّذي اختَرتَهُ لِتَثبيتِ لَوحَةِ المَفاتيحِ عَلى جِهازِك.</li> |
+            ${{ env.DOWNLOAD_GUIDE_CONTENT }}
 
             ---
 

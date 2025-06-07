@@ -39,15 +39,26 @@ However, latin vowel letters are mapped to diacritics, & double pressing on a di
 - `w` is set to `و` (waw / wāw)
 - `y` is set to `ي` (ya' / yāʼ)
 - `g` is set to `غ` (ghayn / ḡayn)
-- `u` is not set to any character
-- `p` is not set to any character
+- `u` is set to ` ُ` (damma) - alternative way to insert damma
+- `p` is set to `ض` (dad / ḍād)
 
 Latin characters that are not in arabic are set in this way (to benefit from their space & not leave them empty):
 - `x` is set to `ش` (shiin / šīn)
 - `c` is set to `ص` (Sad / ṣād)
 - `v` is set to `ى` (alif maqsurah / -ā)
 
-Furthermore, some arabic letters that aren't accessible through the latin keyboard can be accessed through an Uppercase variation of their closest latin equivalent:
+Additionally, some non-Arabic letters are supported with uppercase letters:
+- `G` is set to `ڠ` (ge)
+- `P` is set to `پ` (pe)
+- `V` is set to `ڤ` (ve)
+
+Manual tashkeel insertion is also supported with uppercase letters:
+- `A` manually inserts ` َ` (fatha)
+- `O` manually inserts ` ُ` (damma)
+- `I` manually inserts ` ِ` (kasra)
+- `E` manually inserts ` ّ` (shadda)
+
+Furthermore, some arabic letters can be accessed through an Uppercase variation of their closest latin equivalent:
 - `S` is set to `ص`
 - `D` is set to `ض`
 - `T` is set to `ط`
@@ -181,6 +192,7 @@ After a letter:
 - `;` becomes `؛` (Arabic semicolon)
 - `?` becomes `؟` (Arabic question mark)
 - `,` becomes `،` (Arabic comma)
+- `%` becomes `٪` (Arabic percent sign)
 
 ## 7. Rules For Typing Pronouns
 ### Relative Pronouns

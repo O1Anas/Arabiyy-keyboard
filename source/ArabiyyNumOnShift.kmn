@@ -1,4 +1,4 @@
-﻿store(&Version) '18.0'
+﻿store(&Version) '17.0'
 store(&TARGETS) 'any'
 store(&mnemoniclayout) '1'
 
@@ -298,9 +298,9 @@ any(harf) 'ِ' 'ْ' any(cons) > context(1) 'ِ' 'ال' context(4) 'ّ'
 c ' وا' any(cons) 'ّ' any(diacritic) > ' وال' context(4) 'ّ' context(6) c better one exists ( ْ + cons)
 
 ' ' any(harf) 'َ' 'ّ' any(cons) > ' ' context(2) 'ا' context(5)
-nul any(harf) 'َ' 'ّ' any(cons) > context(1) 'ا' context(4)
+nul any(harf) 'َ' 'ّ' any(cons) > context(2) 'ا' context(5)
 ' ' any(harf) 'ِ' 'ّ' any(cons) > ' ' context(2) context(3) 'ا' context(5)
-nul any(harf) 'ِ' 'ّ' any(cons) > context(1) context(2) 'ا' context(4)
+nul any(harf) 'ِ' 'ّ' any(cons) > context(2) context(3) 'ا' context(5)
 
 c cc handle diacritics at the beginning/after a space
 nul 'ُ' > 'أُ'
@@ -375,11 +375,11 @@ any(cons) 'ّ' 'َنْ' > index(cons, 1) 'ّ' 'ًا'
 
 c cc handle different huruf (مُختَلَف الحُروف)
 c cc cc fix لا when it's not completed
-nul 'لَ' any(WordEnding) > 'لا' context(3)
+nul 'لَ' any(WordEnding) > 'لا' context(4)
 ' لَ' any(WordEnding) > ' لا' context(4)
-nul any(harf) 'لَ' any(WordEnding) > context(1) 'لا' context(4)
+nul any(harf) 'لَ' any(WordEnding) > context(2) 'لا' context(5)
 ' ' any(harf) 'لَ' any(WordEnding) > ' ' context(2) 'لا' context(5)
-nul any(harf) any(diacritic) 'لَ' any(WordEnding) > context(1) context(2) 'لا' context(5)
+nul any(harf) any(diacritic) 'لَ' any(WordEnding) > context(2) context(3) 'لا' context(6)
 ' ' any(harf) any(diacritic) 'لَ' any(WordEnding) > ' ' context(2) context(3) 'لا' context(6)
 
 'إلَّ ' > 'إلّا ' c add alif
@@ -466,8 +466,6 @@ c any(i_rot1) 'ِ' > index(i_rot2, 1)
 
 c Override diacritics when they are different and are not used in any other rule
 store(tashkeel) 'َ' 'ُ' 'ِ'
-any(tashkeel) any(tashkeel) > context(2)
-any(tashkeel) any(tashkeel) > context(2)
 any(tashkeel) any(tashkeel) > context(2)
 
 c '::' > set(&mnemoniclayout='0') save(&mnemoniclayout) c I can't do this https://help.keyman.com/developer/language/reference/set#:~:text=system%20stores%20are-,supported,-%3A
