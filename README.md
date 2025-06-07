@@ -3,12 +3,12 @@
   <h1>Arabiyy - عَرَبِيّ</h1>
 </div>
 
-| **English**  | **العَرَبِيَّة** |
+| **English**  | **العَرَبِيّة** |
 |  :--- |  ---: |
-| <h4>This tool is a virtual keyboard that allows our Muslim brothers and sisters to type any Arabic word with dynamic tashkeel, all of that from the comfort of the Latin keyboard already built into their devices and most of the world's devices.</h4>  | <h3>هَذِهِ الأداة هِيَ لَوحَة مَفاتيحٍ إفتِراضِيَّةٍ تُتيحُ لِإخوانِنا مِنَ المُسلِمينَ والمُسلِماتِ كِتابَةَ أيِّ كَلِمَةٍ عَرَبِيَّةٍ مَعَ تَشكيلِها ديناميكِيًّا، وَهَذا مِن راحَةِ لَوحَةِ المَفاتيحِ اللاتينِيَّةِ المُدمَجَةِ أصلًا في حَواسيبِهِم وَمُعظَمِ حَواسيبِ العالَم‏.‏</h3> |
+| <h4>This tool is a virtual keyboard that allows our Muslim brothers and sisters to type any Arabic word with dynamic tashkeel, all of that from the comfort of the Latin keyboard already built into their devices and most of the world's devices.</h4>  | <h3>هَذِهِ الأداة هِيَ لَوحة مَفاتيحٍ إفتِراضِيّةٍ تُتيحُ لِإخوانِنا مِنَ المُسلِمينَ والمُسلِماتِ كِتابةَ أيِّ كَلِمةٍ عَرَبِيّةٍ مَعَ تَشكيلِها ديناميكِيًّا، وَهَذا مِن راحةِ لَوحةِ المَفاتيحِ اللاتينِيّةِ المُدمَجةِ أصلًا في حَواسيبِهِم وَمُعظَمِ حَواسيبِ العالَم‏.‏</h3> |
 
 <div align="center">
-  <h2><a href="source/Docs/README-en.md">Continue reading in English</a> - <a href="source/Docs/README-ar.md">أكمِل القِراءَةَ بِالعَرَبِيَّةِ الفُصحَى</a></h2>
+  <h2><a href="source/Docs/README-en.md">Continue reading in English</a> - <a href="source/Docs/README-ar.md">أكمِل القِراءةَ بِالعَرَبِيّةِ الفُصحى</a></h2>
 </div>
 
 <div align="center">
@@ -29,7 +29,7 @@
 </details>
 <details align="center"><summary>
 
-#### ‎"‎وَديني دينُ عِزٍّ" Preview
+#### ‎"‎وَديني دينُ عِزّ" Preview
 
 </summary>
   <img src="source/Visuals/preview-diino-3izz.gif">
