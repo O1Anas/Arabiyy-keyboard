@@ -1,10 +1,10 @@
-﻿store(&Version) '10.0'
+﻿store(&Version) '18.0'
 store(&TARGETS) 'any'
 store(&mnemoniclayout) '1'
 
 store(&COPYRIGHT) 'Copyright 2024 © Anas - أنَس عِمران'
 
-store(&KEYBOARDVERSION) '1.00'
+store(&KEYBOARDVERSION) '1.1.0'
 store(&BITMAP) 'Arabiyy.ico'
 
 c store(&ETHNOLOGUECODE) 'arb ara aao arq bbz abv shu acy adf avl arz afb ayh acw ayl acm ary ars apc ayp acx aec ayn ssh ajp pga apd acq abh aeb auz'
@@ -15,19 +15,14 @@ store(&NAME) 'Arabiyy - عَرَبِيّ'
 
 begin Unicode > use(main)
 
-store(cons) \
-  'ذ' 'ظ' 'خ' 'ح' 'ض' 'ص' 'ى' 'ط' 'م' 'ن' 'ب' 'ث' 'ش' 'ز' 'ل' 'ك' 'ج' 'ه' 'غ' 'ف' \
-  'د' 'س' 'ع' 'ت' 'ر' 'ق'
+store(cons) 'ذ' 'ظ' 'خ' 'ح' 'ض' 'ص' 'ى' 'ط' 'م' 'ن' 'ب' 'ث' 'ش' 'ز' 'ل' 'ك' 'ج' 'ه' 'غ' 'ف' 'د' 'س' 'ع' 'ت' 'ر' 'ق'
 store(vowel) 'اوي'
-store(tanween) ' ً ٍ ٌ '
-store(diacritic) 'ُ' 'َ' 'ِ' 'ّ'
-store(FathaVariant) 'َ' 'أ' 'ا' ' '
+store(consOrVowel) 'ذ' 'ظ' 'خ' 'ح' 'ض' 'ص' 'ى' 'ط' 'م' 'ن' 'ب' 'ث' 'ش' 'ز' 'ل' 'ك' 'ج' 'ه' 'غ' 'ف' 'د' 'س' 'ع' 'ت' 'ر' 'ق' 'اوي'
+store(tanween) 'ً' 'ٌ' 'ٍ'
+store(diacritic) 'َ' 'ُ' 'ِ' 'ّ'
+store(FathaVariant) 'َ' 'أ' 'ا'
+store(thing) 'ة' 'ُ' 'َ' 'ِ' 'ّ' 'ً' 'ٌ' 'ٍ' 'أ' 'ءاوي' 'ذ' 'ظ' 'خ' 'ح' 'ض' 'ص' 'ى' 'ط' 'م' 'ن' 'ب' 'ث' 'ش' 'ز' 'ل' 'ك' 'ج' 'ه' 'غ' 'ف' 'د' 'س' 'ع' 'ت' 'ر' 'ق'
 c store(alif) 'أُ' 'أ' 'إ'
-c store(consCode) 'U+0638' 'U+062E' 'U+062D' 'U+0636' 'U+0635' 'U+0649' 'U+0637' 'U+0645' 'U+0646' 'U+0628' 'U+062B' 'U+0634' 'U+0621' 'U+0632' 'U+0644' 'U+0643' 'U+062C' 'U+0647' 'U+063A' 'U+0641' 'U+062F' 'U+0633' 'U+0639' 'U+064A' 'U+062A' 'U+0631' 'U+0648' 'U+0642'
-c store(vowelCode) 'U+0627' 'U+0648' 'U+064A'
-c store(tanweenCode) 'U+064B' 'U+064C' 'U+064D'
-c store(diacriticCode) 'U+064F' 'U+064E' 'U+0650' 'U+0651'
-c store(alifCode) 'U+0623U+064F' 'U+0623' 'U+0625' 'U+0622'
 
 group(main) using keys
 
@@ -64,7 +59,7 @@ group(main) using keys
 + '9' > '9'
 
 + 'a' > 'َ'
-+ 'A' > 'ا'
++ 'A' > 'َ '
 
 + 'b' > 'ب'
 + 'B' > dk(none)
@@ -76,22 +71,22 @@ group(main) using keys
 + 'D' > 'ض'
 
 + 'e' > 'ْ'
-+ 'E' > dk(none)
++ 'E' > 'ّ'
 
 + 'f' > 'ف'
-+ 'F' > dk(none)
++ 'F' > 'ڤ'
 
 + 'g' > 'غ'
-+ 'G' > dk(none)
++ 'G' > 'ڠ'
 
 + 'h' > 'ه'
 + 'H' > dk(none)
 
 + 'i' > 'ِ'
-+ 'I' > dk(none)
++ 'I' > 'ِ '
 
 + 'j' > 'ج'
-+ 'J' > dk(none)
++ 'J' > 'ڠ'
 
 + 'k' > 'ك'
 + 'K' > dk(none)
@@ -106,10 +101,10 @@ group(main) using keys
 + 'N' > dk(none)
 
 + 'o' > 'ُ'
-+ 'O' > dk(none)
++ 'O' > 'ُ '
 
-+ 'p' > '؛'
-+ 'P' > '؛'
++ 'p' > 'ض'
++ 'P' > 'پ'
 
 + 'q' > 'ق'
 + 'Q' > dk(none)
@@ -123,11 +118,11 @@ group(main) using keys
 + 't' > 'ت'
 + 'T' > 'ط'
 
-+ 'u' > dk(none)
++ 'u' > 'ُ'
 + 'U' > '\'
 
 + 'v' > 'ى'
-+ 'V' > '}'
++ 'V' > 'ڤ'
 
 + 'w' > 'و'
 + 'W' > '['
@@ -146,7 +141,7 @@ c non-phonetic bindings
 c cc bindings of the numbers row
 + '²' > '/'
 
-+ ')' > ')'
++ ')' > '()'
 + '°' > '°'
 
 + '=' > '='
@@ -154,10 +149,10 @@ c cc bindings of the numbers row
 
 c cc 2nd line's remaining bindings
 + 'ù' > '/'
-+ '%' > '%'
++ '%' > '٪'
 
 + '*' >  'ۚ'
-+ 'µ' > 'µ'
++ 'µ' > '*'
 
 c cc 3rd line's remaining bindings
 + ',' > '،'
