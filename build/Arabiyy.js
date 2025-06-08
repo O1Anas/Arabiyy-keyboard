@@ -428,7 +428,7 @@ function Keyboard_arabiyy()
       if(1){
         r=m=1;   // Line 122
         k.KDC(0,t);
-        k.KO(-1,t,"\\");
+        k.KO(-1,t,"ُ ");
       }
     }
     else if(k.KKM(e, modCodes.SHIFT | modCodes.VIRTUAL_KEY /* 0x4010 */, keyCodes.K_V /* 0x56 */)) {
@@ -704,52 +704,52 @@ function Keyboard_arabiyy()
         k.KO(-1,t,"بِسمِ اللَّه");
       }
       else if(k.KFCM(8,t,['ا','ل','ل','َ','ذ','َ','ي','ن'])){
-        m=1;   // Line 409
+        m=1;   // Line 413
         k.KDC(8,t);
         k.KO(-1,t,"اللَّذَين");
       }
       else if(k.KFCM(8,t,['ا','ل','ل','َ','ت','َ','ي','ن'])){
-        m=1;   // Line 411
+        m=1;   // Line 415
         k.KDC(8,t);
         k.KO(-1,t,"اللَّتَين");
       }
       else if(k.KFCM(7,t,['ا','ل','ل','َ','ت','ِ','ِ'])){
-        m=1;   // Line 404
+        m=1;   // Line 408
         k.KDC(7,t);
         k.KO(-1,t,"الَّتي");
       }
       else if(k.KFCM(7,t,['ا','ل','ل','َ','ذ','ِ','ِ'])){
-        m=1;   // Line 406
+        m=1;   // Line 410
         k.KDC(7,t);
         k.KO(-1,t,"الَّذي");
       }
       else if(k.KFCM(7,t,['ا','ل','ل','َ','ذ','ا','ن'])){
-        m=1;   // Line 408
+        m=1;   // Line 412
         k.KDC(7,t);
         k.KO(-1,t,"اللَّذان");
       }
       else if(k.KFCM(7,t,['ا','ل','ل','َ','ت','ا','ن'])){
-        m=1;   // Line 410
+        m=1;   // Line 414
         k.KDC(7,t);
         k.KO(-1,t,"اللَّتان");
       }
       else if(k.KFCM(7,t,['ا','ل','ل','ا','ت','ِ','ِ'])){
-        m=1;   // Line 414
+        m=1;   // Line 418
         k.KDC(7,t);
         k.KO(-1,t,"اللّاتي");
       }
       else if(k.KFCM(7,t,['ا','ل','ل','ا','ء','ِ','ِ'])){
-        m=1;   // Line 416
+        m=1;   // Line 420
         k.KDC(7,t);
         k.KO(-1,t,"اللّائي");
       }
       else if(k.KFCM(7,t,['ه','ا','ؤ','ُ','ل','ا','ء'])){
-        m=1;   // Line 419
+        m=1;   // Line 423
         k.KDC(7,t);
         k.KO(-1,t,"هَـٰؤُلاء");
       }
       else if(k.KFCM(7,t,['أ','و','ل','ا','ء','ِ','ك'])){
-        m=1;   // Line 420
+        m=1;   // Line 424
         k.KDC(7,t);
         k.KO(-1,t,"أولَـٰئِك");
       }
@@ -780,23 +780,53 @@ function Keyboard_arabiyy()
         k.KO(-1,t,"لا");
         k.KIO(-1,this.s_WordEnding_24,6,t);
       }
-      else if(k.KFCM(6,t,['ا','ل','ل','َ','ت','ي'])){
+      else if(k.KFCM(6,t,[{t:'n'},{t:'a',a:this.s_harf_23},{t:'a',a:this.s_diacritic_15},'ف','ِ',' '])){
+        m=1;   // Line 395
+        k.KDC(5,t);
+        k.KIO(-1,this.s_harf_23,2,t);
+        k.KIO(-1,this.s_diacritic_15,3,t);
+        k.KO(-1,t,"في ");
+      }
+      else if(k.KFCM(6,t,[' ',{t:'a',a:this.s_harf_23},{t:'a',a:this.s_diacritic_15},'ف','ِ',' '])){
+        m=1;   // Line 396
+        k.KDC(6,t);
+        k.KO(-1,t," ");
+        k.KIO(-1,this.s_harf_23,2,t);
+        k.KIO(-1,this.s_diacritic_15,3,t);
+        k.KO(-1,t,"في ");
+      }
+      else if(k.KFCM(6,t,[{t:'n'},{t:'a',a:this.s_harf_23},{t:'a',a:this.s_diacritic_15},'م','َ',' '])){
         m=1;   // Line 403
+        k.KDC(5,t);
+        k.KIO(-1,this.s_harf_23,2,t);
+        k.KIO(-1,this.s_diacritic_15,3,t);
+        k.KO(-1,t,"ما ");
+      }
+      else if(k.KFCM(6,t,[' ',{t:'a',a:this.s_harf_23},{t:'a',a:this.s_diacritic_15},'م','َ',' '])){
+        m=1;   // Line 404
+        k.KDC(6,t);
+        k.KO(-1,t," ");
+        k.KIO(-1,this.s_harf_23,2,t);
+        k.KIO(-1,this.s_diacritic_15,3,t);
+        k.KO(-1,t,"ما ");
+      }
+      else if(k.KFCM(6,t,['ا','ل','ل','َ','ت','ي'])){
+        m=1;   // Line 407
         k.KDC(6,t);
         k.KO(-1,t,"الَّتي");
       }
       else if(k.KFCM(6,t,['ا','ل','ل','َ','ذ','ي'])){
-        m=1;   // Line 405
+        m=1;   // Line 409
         k.KDC(6,t);
         k.KO(-1,t,"الَّذي");
       }
       else if(k.KFCM(6,t,['ا','ل','ل','ا','ت','ي'])){
-        m=1;   // Line 413
+        m=1;   // Line 417
         k.KDC(6,t);
         k.KO(-1,t,"اللّاتي");
       }
       else if(k.KFCM(6,t,['ا','ل','ل','ا','ء','ي'])){
-        m=1;   // Line 415
+        m=1;   // Line 419
         k.KDC(6,t);
         k.KO(-1,t,"اللّائي");
       }
@@ -841,11 +871,13 @@ function Keyboard_arabiyy()
         k.KO(-1,t,"الأو");
       }
       else if(k.KFCM(5,t,[{t:'n'},'ل',{t:'a',a:this.s_diacritic_15},'ْ',{t:'a',a:this.s_cons_11}])){
-        m=1;   // Line 270
+        m=1;   // Line 271
         k.KDC(4,t);
         k.KO(-1,t,"ل");
-        k.KO(-1,t,"لل");
-        k.KO(-1,t,"ّْ");
+        k.KIO(-1,this.s_diacritic_15,3,t);
+        k.KO(-1,t,"ل");
+        k.KIO(-1,this.s_cons_11,5,t);
+        k.KO(-1,t,"ّ");
       }
       else if(k.KFCM(5,t,[' ','ل',{t:'a',a:this.s_diacritic_15},'ْ',{t:'a',a:this.s_cons_11}])){
         m=1;   // Line 272
@@ -997,18 +1029,30 @@ function Keyboard_arabiyy()
         k.KDC(5,t);
         k.KO(-1,t," فَفي ");
       }
-      else if(k.KFCM(5,t,[{t:'a',a:this.s_harf_23},{t:'a',a:this.s_diacritic_15},'ف','ِ',' '])){
-        m=1;   // Line 394
-        k.KDC(5,t);
-        k.KIO(-1,this.s_harf_23,1,t);
-        k.KIO(-1,this.s_diacritic_15,2,t);
+      else if(k.KFCM(5,t,[{t:'n'},{t:'a',a:this.s_harf_23},'ف','ِ',' '])){
+        m=1;   // Line 393
+        k.KDC(4,t);
+        k.KIO(-1,this.s_harf_23,2,t);
         k.KO(-1,t,"في ");
       }
-      else if(k.KFCM(5,t,[{t:'a',a:this.s_harf_23},{t:'a',a:this.s_diacritic_15},'م','َ',' '])){
-        m=1;   // Line 400
+      else if(k.KFCM(5,t,[' ',{t:'a',a:this.s_harf_23},'ف','ِ',' '])){
+        m=1;   // Line 394
         k.KDC(5,t);
-        k.KIO(-1,this.s_harf_23,1,t);
-        k.KIO(-1,this.s_diacritic_15,2,t);
+        k.KO(-1,t," ");
+        k.KIO(-1,this.s_harf_23,2,t);
+        k.KO(-1,t,"في ");
+      }
+      else if(k.KFCM(5,t,[{t:'n'},{t:'a',a:this.s_harf_23},'م','َ',' '])){
+        m=1;   // Line 401
+        k.KDC(4,t);
+        k.KIO(-1,this.s_harf_23,2,t);
+        k.KO(-1,t,"ما ");
+      }
+      else if(k.KFCM(5,t,[' ',{t:'a',a:this.s_harf_23},'م','َ',' '])){
+        m=1;   // Line 402
+        k.KDC(5,t);
+        k.KO(-1,t," ");
+        k.KIO(-1,this.s_harf_23,2,t);
         k.KO(-1,t,"ما ");
       }
       else if(k.KFCM(4,t,['ط','ت','ّ','ت'])){
@@ -1076,10 +1120,11 @@ function Keyboard_arabiyy()
         m=1;   // Line 269
         k.KDC(3,t);
         k.KO(-1,t,"لل");
-        k.KO(-1,t,"ّْ");
+        k.KIO(-1,this.s_cons_11,4,t);
+        k.KO(-1,t,"ّ");
       }
       else if(k.KFCM(4,t,[' ','ل','ْ',{t:'a',a:this.s_cons_11}])){
-        m=1;   // Line 271
+        m=1;   // Line 270
         k.KDC(4,t);
         k.KO(-1,t," لل");
         k.KIO(-1,this.s_cons_11,4,t);
@@ -1122,19 +1167,19 @@ function Keyboard_arabiyy()
         m=1;   // Line 327
         k.KDC(3,t);
         k.KO(-1,t,"ال");
-        k.KO(-1,t,"ل");
-      }
-      else if(k.KFCM(4,t,[{t:'n'},'أ','ل',{t:'a',a:this.s_vowel_12}])){
-        m=1;   // Line 328
-        k.KDC(3,t);
-        k.KO(-1,t,"ال");
-        k.KO(-1,t,"ل");
+        k.KIO(-1,this.s_cons_11,4,t);
       }
       else if(k.KFCM(4,t,[' ','أ','ل',{t:'a',a:this.s_cons_11}])){
-        m=1;   // Line 329
+        m=1;   // Line 328
         k.KDC(4,t);
         k.KO(-1,t," ال");
         k.KIO(-1,this.s_cons_11,4,t);
+      }
+      else if(k.KFCM(4,t,[{t:'n'},'أ','ل',{t:'a',a:this.s_vowel_12}])){
+        m=1;   // Line 329
+        k.KDC(3,t);
+        k.KO(-1,t,"ال");
+        k.KIO(-1,this.s_vowel_12,4,t);
       }
       else if(k.KFCM(4,t,[' ','أ','ل',{t:'a',a:this.s_vowel_12}])){
         m=1;   // Line 330
@@ -1206,40 +1251,29 @@ function Keyboard_arabiyy()
         k.KDC(4,t);
         k.KO(-1,t," في ");
       }
-      else if(k.KFCM(4,t,[{t:'a',a:this.s_harf_23},'ف','ِ',' '])){
-        m=1;   // Line 393
-        k.KDC(4,t);
-        k.KIO(-1,this.s_harf_23,1,t);
-        k.KO(-1,t,"في ");
-      }
       else if(k.KFCM(4,t,[{t:'n'},'م','َ',' '])){
-        m=1;   // Line 397
+        m=1;   // Line 399
         k.KDC(3,t);
         k.KO(-1,t,"ما ");
       }
       else if(k.KFCM(4,t,[' ','م','َ',' '])){
-        m=1;   // Line 398
+        m=1;   // Line 400
         k.KDC(4,t);
         k.KO(-1,t," ما ");
       }
-      else if(k.KFCM(4,t,[{t:'a',a:this.s_harf_23},'م','َ',' '])){
-        m=1;   // Line 399
-        k.KDC(4,t);
-        k.KIO(-1,this.s_harf_23,1,t);
-        k.KO(-1,t,"ما ");
-      }
       else if(k.KFCM(4,t,[{t:'a',a:this.s_1stChar_25},{t:'a',a:this.s_diacritic_15},'ه','ه'])){
-        m=1;   // Line 433
+        m=1;   // Line 437
         k.KDC(4,t);
         k.KIO(-1,this.s_2ndChar_26,1,t);
         k.KIO(-1,this.s_diacritic_15,2,t);
       }
       else if(k.KFCM(4,t,[{t:'a',a:this.s_2ndChar_26},{t:'i',i:this.s_1stChar_25,o:1},'ه','ه'])){
-        m=1;   // Line 434
+        m=1;   // Line 438
         k.KDC(4,t);
         k.KIO(-1,this.s_2ndChar_26,1,t);
         k.KO(-1,t,"ّ");
       }
+      if(m) {}
       else if(k.KFCM(3,t,[{t:'a',a:this.s_HotkeyTrigger_20},'ج','ج'])){
         m=1;   // Line 203
         k.KDC(3,t);
@@ -1261,7 +1295,6 @@ function Keyboard_arabiyy()
         k.KO(-1,t,"أ");
         k.KIO(-1,this.s_cons_11,3,t);
       }
-      if(m) {}
       else if(k.KFCM(3,t,['أ','َ',{t:'a',a:this.s_vowel_12}])){
         m=1;   // Line 220
         k.KDC(3,t);
@@ -1327,7 +1360,8 @@ function Keyboard_arabiyy()
         m=1;   // Line 276
         k.KDC(2,t);
         k.KO(-1,t,"ال");
-        k.KO(-1,t,"ّْ");
+        k.KIO(-1,this.s_cons_11,3,t);
+        k.KO(-1,t,"ّ");
       }
       else if(k.KFCM(3,t,[' ','ْ',{t:'a',a:this.s_cons_11}])){
         m=1;   // Line 277
@@ -1449,37 +1483,37 @@ function Keyboard_arabiyy()
         k.KO(-1,t,"تًا");
       }
       else if(k.KFCM(3,t,[{t:'a',a:this.s_1stChar_25},'ه','ه'])){
-        m=1;   // Line 432
+        m=1;   // Line 436
         k.KDC(3,t);
         k.KIO(-1,this.s_2ndChar_26,1,t);
       }
       else if(k.KFCM(3,t,['ت','ّ','ت'])){
-        m=1;   // Line 435
+        m=1;   // Line 439
         k.KDC(3,t);
         k.KO(-1,t,"ط");
       }
       else if(k.KFCM(3,t,['س','ّ','س'])){
-        m=1;   // Line 436
+        m=1;   // Line 440
         k.KDC(3,t);
         k.KO(-1,t,"ص");
       }
       else if(k.KFCM(3,t,['د','ّ','د'])){
-        m=1;   // Line 437
+        m=1;   // Line 441
         k.KDC(3,t);
         k.KO(-1,t,"ض");
       }
       else if(k.KFCM(3,t,['ك','ّ','ك'])){
-        m=1;   // Line 438
+        m=1;   // Line 442
         k.KDC(3,t);
         k.KO(-1,t,"خ");
       }
       else if(k.KFCM(3,t,['ض','ّ','ض'])){
-        m=1;   // Line 439
+        m=1;   // Line 443
         k.KDC(3,t);
         k.KO(-1,t,"ظ");
       }
       else if(k.KFCM(3,t,['ه','ّ','ه'])){
-        m=1;   // Line 440
+        m=1;   // Line 444
         k.KDC(3,t);
         k.KO(-1,t,"ح");
       }
@@ -1650,47 +1684,47 @@ function Keyboard_arabiyy()
         k.KO(-1,t,"ة");
       }
       else if(k.KFCM(2,t,[{t:'a',a:this.s_a_rot1_27},'/'])){
-        m=1;   // Line 457
+        m=1;   // Line 461
         k.KDC(2,t);
         k.KIO(-1,this.s_a_rot2_28,1,t);
       }
       else if(k.KFCM(2,t,[{t:'a',a:this.s_d_rot1_29},'/'])){
-        m=1;   // Line 458
+        m=1;   // Line 462
         k.KDC(2,t);
         k.KIO(-1,this.s_d_rot2_30,1,t);
       }
       else if(k.KFCM(2,t,[{t:'a',a:this.s_h_rot1_31},'/'])){
-        m=1;   // Line 459
+        m=1;   // Line 463
         k.KDC(2,t);
         k.KIO(-1,this.s_h_rot2_32,1,t);
       }
       else if(k.KFCM(2,t,[{t:'a',a:this.s_s_rot1_33},'/'])){
-        m=1;   // Line 460
+        m=1;   // Line 464
         k.KDC(2,t);
         k.KIO(-1,this.s_s_rot2_34,1,t);
       }
       else if(k.KFCM(2,t,[{t:'a',a:this.s_t_rot1_35},'/'])){
-        m=1;   // Line 461
+        m=1;   // Line 465
         k.KDC(2,t);
         k.KIO(-1,this.s_t_rot2_36,1,t);
       }
       else if(k.KFCM(2,t,[{t:'a',a:this.s_tashkeel_37},{t:'a',a:this.s_tashkeel_37}])){
-        m=1;   // Line 469
+        m=1;   // Line 473
         k.KDC(2,t);
         k.KIO(-1,this.s_tashkeel_37,2,t);
       }
       else if(k.KFCM(1,t,[';'])){
-        m=1;   // Line 425
+        m=1;   // Line 429
         k.KDC(1,t);
         k.KO(-1,t,"؛");
       }
       else if(k.KFCM(1,t,['?'])){
-        m=1;   // Line 426
+        m=1;   // Line 430
         k.KDC(1,t);
         k.KO(-1,t,"؟");
       }
       else if(k.KFCM(1,t,[','])){
-        m=1;   // Line 427
+        m=1;   // Line 431
         k.KDC(1,t);
         k.KO(-1,t,"،");
       }

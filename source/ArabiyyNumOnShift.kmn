@@ -119,7 +119,7 @@ group(main) using keys
 + 'T' > 'ط'
 
 + 'u' > 'ُ'
-+ 'U' > '\'
++ 'U' > 'ُ '
 
 + 'v' > 'ى'
 + 'V' > 'ڤ'
@@ -266,14 +266,14 @@ any(FathaVariant) 'لِْ' > 'الإ' c 'alei' = 'الإ'
 
 c cc typing al- + letters
 store(harf) 'ب' 'ف' 'و' 'ك' 'أ' nul ''
-nul 'ل' 'ْ' any(cons) > 'لل' context(3) 'ّ'
-nul 'ل' any(diacritic) 'ْ' any(cons) > 'ل' context(2) 'ل' context(4) 'ّ'
+nul 'ل' 'ْ' any(cons) > 'لل' context(4) 'ّ'
 ' ' 'ل' 'ْ' any(cons) > ' لل' context(4) 'ّ'
+nul 'ل' any(diacritic) 'ْ' any(cons) > 'ل' context(3) 'ل' context(5) 'ّ'
 ' ' 'ل' any(diacritic) 'ْ' any(cons) > ' ل' context(3) 'ل' context(5) 'ّ'
 any(harf) 'ل' any(diacritic) 'ْ' any(cons) > context(1) 'ل' context(3) 'ل' context(5) 'ّ'
 any(harf) 'َ' 'ل' any(diacritic) 'ْ' any(cons) > context(1) 'َ' 'ل' context(4) 'ل' context(6) 'ّ'
 
-nul 'ْ' any(cons) > 'ال' context(2) 'ّ'
+nul 'ْ' any(cons) > 'ال' context(3) 'ّ'
 ' ' 'ْ' any(cons) > ' ال' context(3) 'ّ'
 any(harf) 'ْ' any(cons) > context(1) 'ال' context(3) 'ّ'
 any(harf) 'َ' 'ْ' any(cons) > context(1) 'ال' context(4) 'ّ'
@@ -324,10 +324,10 @@ c nul any(diacritic) > nul index(alif, 1)
 c ' ' any(diacritic) > ' ' index(alif, 1)
 
 c cc 'al' + cons/vowel = ال + that cons/vowel
-nul 'أ' 'ل' any(cons) > 'ال' context(3) 
-nul 'أ' 'ل' any(vowel) > 'ال' context(3)
-' ' 'أ' 'ل' any(cons) > ' ال' context(4)
-' ' 'أ' 'ل' any(vowel) > ' ال' context(4)
+nul 'أل' any(cons) > 'ال' context(4) 
+' ' 'أل' any(cons) > ' ال' context(4)
+nul 'أل' any(vowel) > 'ال' context(4)
+' ' 'أل' any(vowel) > ' ال' context(4)
 
 c ' ' 'ا' any(cons) > ' أ' context(3)
 c ' ' 'ا' any(vowel) > ' أ' context(3)
@@ -390,14 +390,18 @@ nul 'فِ ' > 'في '
 ' فِ ' > ' في '
 nul 'فِّ ' > 'فَفي '
 ' فِّ ' > ' فَفي '
-any(harf) 'فِ ' > context(1) 'في '
-any(harf) any(diacritic) 'فِ ' > context(1) context(2) 'في '
+nul any(harf) 'فِ ' > context(2) 'في '
+' ' any(harf) 'فِ ' > ' ' context(2) 'في '
+nul any(harf) any(diacritic) 'فِ ' > context(2) context(3) 'في '
+' ' any(harf) any(diacritic) 'فِ ' > ' ' context(2) context(3) 'في '
 
 c cc fix ما
 nul 'مَ ' > 'ما '
 ' مَ ' > ' ما '
-any(harf) 'مَ ' > context(1) 'ما '
-any(harf) any(diacritic) 'مَ ' > context(1) context(2) 'ما '
+nul any(harf) 'مَ ' > context(2) 'ما '
+' ' any(harf) 'مَ ' > ' ' context(2) 'ما '
+nul any(harf) any(diacritic) 'مَ ' > context(2) context(3) 'ما '
+' ' any(harf) any(diacritic) 'مَ ' > ' ' context(2) context(3) 'ما '
 
 c cc Relative pronouns (الأسماءُ المَوصولَه)
 'اللَتي' > 'الَّتي' c allatي (ي here is either y or ii)
