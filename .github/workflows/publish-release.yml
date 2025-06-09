@@ -272,11 +272,11 @@ jobs:
 
             ---
 
-            ${{ env.DOWNLOAD_GUIDE_CONTENT }}
+            <h3 align="center">Full Changelog:<a href="https://github.com/O1Anas/Arabiyy-keyboard/compare/v${{ env.PREVIOUS_VERSION }}...v${{ env.KMN_COMMON_VERSION }}"> v${{ env.KMN_COMMON_VERSION }}...v${{ env.PREVIOUS_VERSION }} </a>قائِمةُ التَّغييراتِ الكامِلة‏:‏</h3>
 
             ---
 
-            **Full Changelog**: [`${{ env.KMN_COMMON_VERSION }}`](https://github.com/O1Anas/Arabiyy-keyboard/compare/${{ env.PREVIOUS_VERSION }}...v${{ env.KMN_COMMON_VERSION }})
+            <a href="https://github.com/O1Anas/Arabiyy-keyboard/blob/v${{ env.KMN_COMMON_VERSION }}/source/Docs/download-guide.md" target="_blank">Please press here to read the download & installation guide - مِن فَضلِك، إضغَط هُنا لِقِراءةِ دَليلِ التَّحميلِ والتَّثبيت</a>
 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

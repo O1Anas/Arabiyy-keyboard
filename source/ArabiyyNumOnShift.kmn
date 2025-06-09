@@ -4,7 +4,7 @@ store(&mnemoniclayout) '1'
 
 store(&COPYRIGHT) 'Copyright 2024 © Anas - أنَس عِمران'
 
-store(&KEYBOARDVERSION) '1.1.0'
+store(&KEYBOARDVERSION) '1.2.0'
 store(&BITMAP) 'Arabiyy.ico'
 
 c store(&ETHNOLOGUECODE) 'arb ara aao arq bbz abv shu acy adf avl arz afb ayh acw ayl acm ary ars apc ayp acx aec ayn ssh ajp pga apd acq abh aeb auz'
@@ -149,7 +149,7 @@ c cc bindings of the numbers row
 
 c cc 2nd line's remaining bindings
 + 'ù' > '/'
-+ '%' > '٪'
++ '%' > '%'
 
 + '*' >  'ۚ'
 + 'µ' > '*'
@@ -170,13 +170,23 @@ c cc 3rd line's remaining bindings
 match > use(post)
 group(post)
 
-c Remove the c's at the beginning of the next 3 lines if you prefer Arabic-Indic numbers
-c store(digitkey) '0123456789'
-c store(digit) '٠١٢٣٤٥٦٧٨٩'
-c any(digitkey) > index(digit, 1)
+c Numbers
+store(westernArabicNumerals) '0123456789%'
+store(easternArabicNumerals) '٠١٢٣٤٥٦٧٨٩٪'
+store(NumOpt) '0'
+
+'//رقم ' > nul
+if(NumOpt = '0') '//رقم ' > set(NumOpt = '1') save(NumOpt)
+if(NumOpt = '1') '//رقم ' > set(NumOpt = '0') save(NumOpt)
+
+any(westernArabicNumerals) if(NumOpt = '1') > index(easternArabicNumerals, 1)
 
 c Shadda
 any(cons) index(cons, 1) > context(1) 'ّ'
+
+'َ ' 'نْ' > 'ً'
+'ُ ' 'نْ' > 'ٌ'
+'ِ ' 'نْ' > 'ٍ'
 
 'و' 'و' > 'وّ'
 'ي' 'ي' > 'يّ'
@@ -213,6 +223,8 @@ any(QuranSymbols1) '/' > index(QuranSymbols2, 1)
 any(QuranSymbols1) 'ۚ' > index(QuranSymbols2, 1)
 
 c Handle diacritics + vowels
+store(harf) 'ب' 'ف' 'و' 'ك' 'أ' nul ''
+
 'َ' 'َ'  > 'ا'
 'ا' 'َ' > 'أ'
 'أَ' 'َ' > 'ى'
@@ -265,7 +277,6 @@ any(FathaVariant) 'لُْ' > 'الأُ' c 'aleo' = 'الأُ'
 any(FathaVariant) 'لِْ' > 'الإ' c 'alei' = 'الإ'
 
 c cc typing al- + letters
-store(harf) 'ب' 'ف' 'و' 'ك' 'أ' nul ''
 nul 'ل' 'ْ' any(cons) > 'لل' context(4) 'ّ'
 ' ' 'ل' 'ْ' any(cons) > ' لل' context(4) 'ّ'
 nul 'ل' any(diacritic) 'ْ' any(cons) > 'ل' context(3) 'ل' context(5) 'ّ'
@@ -434,14 +445,21 @@ c switch to a variant of a consonant
 store(1stChar) 'د' 'ت' 'س' 'ض' 'ك'
 store(2ndChar) 'ذ' 'ث' 'ش' 'ظ' 'خ'
 any(1stChar) 'هه' > index(2ndChar, 1)
-any(1stChar) any(diacritic) 'هه' > index(2ndChar, 1) context(2)
-any(2ndChar) index(1stChar, 1) 'هه' > index(2ndChar, 1) 'ّ'
+c any(1stChar) any(diacritic) 'هه' > index(2ndChar, 1) context(2) this results in many problems, ex: 'sahh' in Yosahhil is becoming ش
+any(2ndChar) index(1stChar, 1) 'هه' > index(2ndChar, 1) 'ّ' c add shadda to 2ndChar using 1stChar combination
 'تّ' 'ت' > 'ط'
 'سّ' 'س' > 'ص'
-'دّ' 'د' > 'ض'
 'كّ' 'ك' > 'خ'
-'ضّ' 'ض' > 'ظ'
 'هّه' > 'ح'
+'دّ' 'د' > 'ض'
+'ضّ' 'ض' > 'ظ'
+c 'ضّ' 'ض' > 'پ'
+
+'بّ' 'ب' > 'پ'
+'ىّ' 'ى' > 'ڤ'
+'فّ' 'ف' > 'ڤ'
+'غّ' 'غ' > 'ڠ'
+'جّ' 'ج' > 'ڠ'
 
 store(a_rot1) 'َ' 'ا' 'آ' 'أ'  'ٰ' 'ى' 'ع'
 store(a_rot2) 'ا' 'آ' 'أ' 'ٰ' 'ى' 'ع' 'َ'

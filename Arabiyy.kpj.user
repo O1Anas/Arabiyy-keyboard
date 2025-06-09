@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <KeymanDeveloperProjectUser>
   <ViewState>
-    <tab>1</tab>
+    <tab>3</tab>
     <showhelp>0</showhelp>
-    <path>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\Arabiyy.kpj</path>
+    <path>C:\Users\MMG\Documents\Keyman Developer\Projects\V1.0.0-Arabiyy-keyboard\Arabiyy.kpj</path>
+    <file ID="id_7e2d1569271b3facd0719443cfe6eda4" Expanded="1"/>
   </ViewState>
   <FileStates>
     <FileState>
@@ -96,24 +97,30 @@
   <MRU>
     <File>
       <ID>id_MRU0</ID>
+      <Filename>Arabiyy.kps</Filename>
+      <FileType>.kps</FileType>
+      <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\V1.0.0-Arabiyy-keyboard\source\Arabiyy.kps</FullPath>
+    </File>
+    <File>
+      <ID>id_MRU1</ID>
       <Filename>Arabiyy.kmn</Filename>
       <FileType>.kmn</FileType>
       <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\V1.0.0-Arabiyy-keyboard\source\Arabiyy.kmn</FullPath>
     </File>
     <File>
-      <ID>id_MRU1</ID>
+      <ID>id_MRU2</ID>
       <Filename>ArabiyyNumOnShift.kmn</Filename>
       <FileType>.kmn</FileType>
       <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\V1.0.0-Arabiyy-keyboard\source\ArabiyyNumOnShift.kmn</FullPath>
     </File>
     <File>
-      <ID>id_MRU2</ID>
+      <ID>id_MRU3</ID>
       <Filename>Arabiyy.kmn</Filename>
       <FileType>.kmn</FileType>
       <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\source\Arabiyy.kmn</FullPath>
     </File>
     <File>
-      <ID>id_MRU3</ID>
+      <ID>id_MRU4</ID>
       <Filename>ArabiyyNumOnShift.kmn</Filename>
       <FileType>.kmn</FileType>
       <FullPath>C:\Users\MMG\Documents\Keyman Developer\Projects\Arabiyy\source\ArabiyyNumOnShift.kmn</FullPath>

@@ -4,11 +4,13 @@
 
 | <div align="center"><h3>🌟Features</h3></div> | <div align="center"><h3 dir="rtl">🌟‏الميزات</h3></div> |
 | :--- | ---: |
-| - | <div dir="rtl">-</div> |
+| Added support for additional non-Arabic character transformations: (3x `ب` (`b`) → `پ`), (3x `ى` / 3x `ف` → `ڤ`), (3x `غ` / 3x `ج` → `ڠ`) | <div dir="rtl">تَمَّت إضافةُ دَعمٍ لِتَحويلاتِ أحرفٍ غَيرِ عَرَبِيّةٍ إضافِيّة‏:‏ ‏(‏٣× `ب` ← `پ`)، ‏(‏٣× ‏`‏ى` / ٣× ‏`‏ف` ← ‏`‏ڤ`)، ‏(‏٣× ‏`‏غ` / ٣× ‏`‏ج` ← ‏`‏ڠ`)</div> |
+| Added numeral type preference toggle with `//رقم ` command to switch between Western (0-9) and Eastern Arabic numerals (٠-٩) (along with `%` -> `٪`) | <div dir="rtl">تَمَّت إضافةُ خاصِيّةِ تَفضيلِ نَوعِ الأرقامِ بِأمرِ `//رقم ` لِلتَّبديلِ بَينَ الأرقامِ العَرَبِيّةِ الغَربِيّةِ (0-9) والعَرَبِيّةِ الشَّرقِيّةِ (٠-٩) (مَعَ ‏`‏%` -> ‏`‏٪`)</div> |
+| Added ability to type tanween anywhere using capital vowel + `ne`: `Ane` → `ً`, `One` → `ٌ`, `Ine` → `ٍ` | <div dir="rtl">تَمَّت إضافةُ إمكانِيّةِ كِتابةِ التَّنوينِ في أيِّ مَكانٍ باستِخدامِ حَرفِ العِلّةِ الكَبيرِ ‏+‏ ‏`‏ne‏`‏:‏ ‏`‏Ane` ‏←‏ ‏`ً`‏، ‏`‏One` ‏←‏ ‏`ٌ`‏، ‏`‏Ine` ‏←‏ ‏`ٍ`‏</div> |
 | <div align="center"><h3>💪Fixes</h3></div> | <div align="center"><h3 dir="rtl">💪‏الإصلاحات</h3></div> |
-| - | <div dir="rtl">-</div> |
+| Made writing `يُسَهِّلُ` possible by commenting out a rule on line [`448`](https://github.com/O1Anas/Arabiyy-keyboard/blob/main/source/ArabiyyNumOnShift.kmn#L448) | <div dir="rtl">تَمَّ جَعلُ كِتابةِ `يُسَهِّلُ` مُمكِنةً عَن طَريقِ تَعطيلِ قاعِدةٍ في السَّطرِ [`448`](https://github.com/O1Anas/Arabiyy-keyboard/blob/main/source/ArabiyyNumOnShift.kmn#L448)</div> |
 | <div align="center"><h3>🛠️Behind the scenes</h3></div> | <div align="center"><h3 dir="rtl">🛠️‏خَلفَ الكَواليس</h3></div> |
-| - | <div dir="rtl">-</div> |
+| Reverted the `٪` sign to not be the default output when pressing `%` | <div dir="rtl">أُرجِعَت إشارةُ `٪` كَي لا تَكونَ الإخراجَ الأصلِيَّ عِندَ الضَّغطِ على `%`</div> |
 
 ## 1.1.0
 
@@ -22,8 +24,8 @@
 | <div align="center"><h3>🛠️Behind the scenes</h3></div> | <div align="center"><h3 dir="rtl">🛠️‏خَلفَ الكَواليس</h3></div> |
 | Bumped the keyman version to v17, as the new standard for the `Arabiyy` tool | <div dir="rtl">تَمَّ تَحديثُ إصدارِ Keyman إلى v17، كالمِعيارِ الجَديدِ لأداةِ `Arabiyy`</div> |
 | Temporary: Made `)` actually output `()` instead because there's currently no way to insert `)` | <div dir="rtl">مُؤقَّتًا: جُعِلَ `)` يُنتِجُ `()` بِدَلًا مِن ذَلِكَ لِأنَّهُ لا يوجَدُ حالِيًّا طَريقةٌ لإدخالِ `)`</div> |
-| Made the `٪` sign the default output when pressing `%` | <div dir="rtl">جُعِلَت إشارةُ `٪` هي الإخراجَ الافتراضيَّ عِندَ الضَّغطِ على `%`</div> |
-| Made the `*` sign the default output when pressing `µ` in `NumOnShift` keyboard (It was missing, needed for writing markdown) | <div dir="rtl">جُعِلَت إشارةُ `*` هي الإخراجَ الافتراضيَّ عِندَ الضَّغطِ على `µ` في لَوحةِ مَفاتيحِ `NumOnShift` (كانَت مَفقودة، ومَطلوبةً لِكِتابةِ Markdown)</div> |
+| Made the `٪` sign the default output when pressing `%` | <div dir="rtl">جُعِلَت إشارةُ `٪` هي الإخراجَ الأصلِيَّ عِندَ الضَّغطِ على `%`</div> |
+| Made the `*` sign the default output when pressing `µ` in `NumOnShift` keyboard (It was missing, needed for writing markdown) | <div dir="rtl">جُعِلَت إشارةُ `*` هي الإخراجَ الأصلِيَّ عِندَ الضَّغطِ على `µ` في لَوحةِ مَفاتيحِ `NumOnShift` (كانَت مَفقودة، ومَطلوبةً لِكِتابةِ Markdown)</div> |
 
 ## 1.0.0
 - Initial release

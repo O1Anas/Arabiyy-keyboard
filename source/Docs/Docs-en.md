@@ -27,9 +27,9 @@ However, latin vowel letters are mapped to diacritics, & double pressing on a di
 - `i` is set to ` ِ` (kasra)
   - + `i` (another kasra) turns it into `ي` (ya')
 
-- `o` is set to ` ُ` (damma)
-  - + `o` (another damma) turns it into `و` (waw)
-  - + `o` (another damma) turns it into `ؤ` (Waw with Hamza Above)
+- `o` (or `u`) is set to ` ُ` (damma)
+  - + `o` (or `u`) (another damma) turns it into `و` (waw)
+  - + `o` (or `u`) (another damma) turns it into `ؤ` (Waw with Hamza Above)
 
 - `e` is set to ` ْ` (sukoon)
   - + `e` (another sukoon) turns it into ` ّ` (shadda)
@@ -54,7 +54,7 @@ Additionally, some non-Arabic letters are supported with uppercase letters:
 
 Manual tashkeel insertion is also supported with uppercase letters:
 - `A` manually inserts ` َ` (fatha)
-- `O` manually inserts ` ُ` (damma)
+- `O` (or `U`) manually inserts ` ُ` (damma)
 - `I` manually inserts ` ِ` (kasra)
 - `E` manually inserts ` ّ` (shadda)
 
@@ -118,13 +118,21 @@ Also, & as we mentioned in [the 1st heading](#0-phonetic-nature):
 - With ` ِ`: `‎ ِ` `‎ي` `‎إ`
 - With ` ْ`: `‎ ْ` `‎ ّ` `‎ ٓ` `‎ـ`
 
-## 4. Consonant Variant Switching
+## 4. Consonant & non-arabic Variant Switching
 Transformation of certain consonants:
 - `‎تّ` + `‎ت` (3x `‎ت`) becomes `‎ط`
 - `‎سّ` + `‎س` (3x `‎س`) becomes `‎ص`
+- `‎كّ` + `‎ك` (3x `‎ك`) becomes `‎خ`
+- `‎هّ` + `‎ه` (3x `‎ه`) becomes `‎ح`
 - `‎دّ` + `‎د` (3x `‎د`) becomes `‎ض`
   - `‎ضّ` + `‎ض` (3x `‎ض`) becomes `‎ظ`
-- `‎كّ` + `‎ك` (3x `‎ك`) becomes `‎خ`
+
+Transformation of certain non-Arabic characters:
+- `‎بّ` + `‎ب` (3x `‎ب` (`b`)) becomes `‎پ` (pe)
+- `‎ىّ` + `‎ى` (3x `‎ى` (`v`)) becomes `‎ڤ` (ve)
+- `‎فّ` + `‎ف` (3x `‎ف` (`f`)) becomes `‎ڤ` (ve)
+- `‎غّ` + `‎غ` (3x `‎غ` (`g`)) becomes `‎ڠ` (ge)
+- `‎جّ` + `‎ج` (3x `‎ج` (`j`)) becomes `‎ڠ` (ge)
 
 Ones that usually involve `h` in their transliterations:
 - `‎د‎` + `‎هه‎` (`‎دهّ`) becomes `‎ذ`
@@ -165,7 +173,7 @@ After these letters: `ب` (b), `ف` (f), `و` (w), `ك` (k) and `أ` (a), (with 
 ### Diacritic Placement Rules
 Semi-Intelligent handling of diacritics at word beginnings:
 - Initial `a` (` َ`) becomes `أ` 
-- Initial `o` (` ُ`) becomes `أُ` 
+- Initial `o` (or `u`) (` ُ`) becomes `أُ` 
 - Initial `i` (` ِ`) becomes `إ` 
 
 - Initial `ee` (2x ` ْ`) becomes `ا` 
@@ -173,10 +181,16 @@ Semi-Intelligent handling of diacritics at word beginnings:
 ## 6. Word Ending shortcuts
 ### Tanween (Nunation) Rules
 After a letter:
-- `one` (`‎ُنّْ`) becomes `‎ ٌ` 
-- `ine` (`‎ِنّْ`) becomes `‎ ٍ` 
-- `ane` (`‎َنّْ`) becomes `‎ ً` 
+- `one` (`‎ُنّْ`) becomes `‎ ٌ`
+- `ine` (`‎ِنّْ`) becomes `‎ ٍ`
+- `ane` (`‎َنّْ`) becomes `‎ ً`
 - Hint: Type `n` twice (`nn`, eg: `anne`) when adding a tanween to a ta' to convert it to ta' marbouta.
+
+### Direct Tanween Input
+You can also type tanween directly anywhere (not just at word endings) using capital vowel letters followed by 'ne':
+- `Ane` becomes `ً` (fatha tanween)
+- `One` becomes `ٌ` (damma tanween)
+- `Ine` becomes `ٍ` (kasra tanween)
 
 ### Ta' Marbouta Rules
 - Ta' (`ت`) (with or without a diacritic) followed by a sukun (` ْ`) & a space converts into `ة` + the diacritic if it was written before
@@ -220,7 +234,15 @@ You can cycle through related letters using `/`, the list of rotations is:
 - h-letter rotations: `‎ه`, `‎ح`, `‎خ`
 - t-letter rotations: `‎س`, `‎ص`, `‎ش`
 
-## 9. Diacritic overriding rule
+## 9. Numeral Type Preference
+You can toggle between Western Arabic numerals (0-9) and Eastern Arabic numerals (٠-٩) using the `//رقم ` command:
+- Default mode: Western numerals (0123456789%)
+- After typing `//رقم ` continuosly anywhere: Switch to Eastern numerals (٠١٢٣٤٥٦٧٨٩٪)
+- Type `//رقم ` again: Return to Western numerals
+
+Example: Type `//رقم ` then `123` to get `١٢٣`
+
+## 10. Diacritic overriding rule
 Any diacritic written overrides the previous diactrict
 ![Preview-Tashkeel](../Visuals/preview-tashkeel-overriding.gif)
 
